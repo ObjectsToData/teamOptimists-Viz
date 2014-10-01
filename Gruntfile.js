@@ -18,6 +18,12 @@ module.exports = function(grunt) {
         src: '**/*.{html,css}',
         dest: 'dist/'
       },
+      scripts: {
+        expand: true,
+        cwd: 'src',
+        src: 'scripts/**/*.js',
+        dest: 'dist/'
+      },
       images: {
         expand: true,
         flatten: true,
@@ -32,8 +38,16 @@ module.exports = function(grunt) {
       }  
     },
     bowercopy: {
+      masonry: {
+        src: 'masonry/dist/masonry.pkgd.min.js',
+        dest: 'dist/vendor/'
+      },
       jquery: {
         src: 'jquery/dist/jquery.min.js',
+        dest: 'dist/vendor/'
+      },
+      jqueryMap: {
+        src: 'jquery/dist/jquery.min.map',
         dest: 'dist/vendor/'
       }
     },
@@ -55,7 +69,7 @@ module.exports = function(grunt) {
       },
       scripts: {
         files: ['src/scripts/**/*.js'],
-        tasks: ['jshint']
+        tasks: ['copy:scripts']
       },
       assets: {
         files: ['src/images/**/*'],
