@@ -33,8 +33,8 @@ module.exports = function(grunt) {
     },
     bowercopy: {
       jquery: {
-        src: 'jquery/dist/*',
-        dest: 'dist/vendor/jquery'
+        src: 'jquery/dist/jquery.min.js',
+        dest: 'dist/vendor/'
       }
     },
     express: {
