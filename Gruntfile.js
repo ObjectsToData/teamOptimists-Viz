@@ -58,8 +58,8 @@ module.exports = function(grunt) {
         tasks: ['jshint']
       },
       assets: {
-        files: ['src/images/**/*', 'src/fonts/**/*', 'src/styles/**/*'],
-        tasks: ['copy:images', 'copy:fonts', 'copy:styles']
+        files: ['src/images/**/*'],
+        tasks: ['copy:images']
       },
       options: {
         livereload: true  
