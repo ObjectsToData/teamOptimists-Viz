@@ -3,12 +3,8 @@ module.exports = function(grunt) {
     clean: {
       build: {
         src: ['dist/']
-      },
-      deploy: {
-        src: ['dist/elements', 'dist/index-raw.html', 'dist/vulcanized.html']
       }
     },
-
     copy: {
       config: {
         expand: true,
@@ -21,24 +17,6 @@ module.exports = function(grunt) {
         cwd: 'src',
         src: '**/*.{html,css}',
         dest: 'dist/'
-      },
-      scriptsOwl: {
-        src: 'src/scripts/owl.carousel.min.js',
-        dest: 'dist/scripts/owl.carousel.min.js'
-      },
-      cthVersionScrollReveal: {
-        src: 'src/scripts/CTH-VERSION-scrollReveal.js',
-        dest: 'dist/scripts/CTH-VERSION-scrollReveal.js'
-      },
-      cthVersionBootstrap: {
-        src: 'src/scripts/CTH-VERSION-bootstrap.js',
-        dest: 'dist/scripts/CTH-VERSION-bootstrap.js'
-      },
-      fonts: {
-        expand: true,
-        flatten: true,
-        src: 'src/fonts/**/*',
-        dest: 'dist/fonts'
       },
       images: {
         expand: true,
@@ -53,69 +31,10 @@ module.exports = function(grunt) {
         dest: 'dist/styles'
       }  
     },
-
     bowercopy: {
-      platform: {
-        src: 'platform/platform.js',
-        dest: 'dist/vendor/platform.js'
-      },
-      platformMap: {
-        src: 'platform/platform.js.map',
-        dest: 'dist/vendor/platform.js.map'
-      },
-      ViewportUnitsBuggyfill: {
-        src: 'viewport-units-buggyfill/viewport-units-buggyfill.js',
-        dest: 'dist/vendor/viewport-units-buggyfill.js'
-      },
-      firebase: {
-        src: 'firebase/firebase.js',
-        dest: 'dist/vendor/firebase.js'
-      },
-      firebaseSimpleLogin: {
-        src: 'firebase-simple-login/firebase-simple-login.js',
-        dest: 'dist/vendor/firebase-simple-login.js'
-      },
-      polymer: {
-        src: 'polymer/**/*',
-        dest: 'dist/vendor/polymer'
-      },
-      coreTooltip: {
-        src: 'core-tooltip/**/*',
-        dest: 'dist/vendor/core-tooltip'
-      },
-      coreCollapse: {
-        src: 'core-collapse/**/*',
-        dest: 'dist/vendor/core-collapse'
-      },
-      coreOverlay: {
-        src: 'core-overlay/**/*',
-        dest: 'dist/vendor/core-overlay'
-      },
-      coreTransitionforOverlay: {
-        src: 'core-transition/**/*',
-        dest: 'dist/vendor/core-transition'
-      },
-      coreMetaforOverlay: {
-        src: 'core-meta/**/*',
-        dest: 'dist/vendor/core-meta'
-      },
-      firebaseElement: {
-        src: 'firebase-element/**/*',
-        dest: 'dist/vendor/firebase-element'
-      },
       jquery: {
         src: 'jquery/dist/*',
         dest: 'dist/vendor/jquery'
-      },
-      jqueryEasingPlugin: {
-        src: 'jquery.easing/js/jquery.easing.min.js',
-        dest: 'dist/vendor/jquery.easing.min.js'
-      }
-    },
-    vulcanize: {
-      files: {
-        src: 'dist/index-raw.html',
-        dest: 'dist/index.html'
       }
     },
     express: {
@@ -125,27 +44,14 @@ module.exports = function(grunt) {
         }
       }
     },
-    jshint: {
-      all: ['src/scripts/housemouse.js']
-    },
-    'gh-pages': {
-      production: {
-        options: {
-          base: 'dist',
-          branch: 'master',
-          repo: 'git@github.com:cth-housemouse/cth-housemouse.github.io.git'
-        },
-        src: ['**']
-      }
-    },
     watch: {
       html: {
-        files: ['src/**/*.html'],
-        tasks: ['copy:html', 'vulcanize']  
+      files: ['src/**/*.html'],
+        tasks: ['copy:html']  
       },
       css: {
         files: ['src/**/*.css'],
-        tasks: ['copy:styles', 'vulcanize']  
+        tasks: ['copy:styles']  
       },
       scripts: {
         files: ['src/scripts/**/*.js'],
@@ -161,16 +67,14 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('build', ['clean:build', 'jshint', 'copy', 'bowercopy', 'vulcanize']);
+  grunt.registerTask('build', ['clean:build', 'copy', 'bowercopy']);
   grunt.registerTask('default', ['build', 'express', 'watch']);
   grunt.registerTask('deploy', ['build', 'gh-pages']);
 
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-bowercopy');
-  grunt.loadNpmTasks('grunt-vulcanize');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-express-server');
   grunt.loadNpmTasks('grunt-gh-pages');
 }
