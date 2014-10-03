@@ -68,6 +68,17 @@ module.exports = function(grunt) {
         }
       }
     },
+    'gh-pages': {
+      production: {
+        options: {
+          base: 'dist',
+          branch: 'master',
+          repo: 'git@github.com:ObjectsToData/ObjectsToData.github.io.git'
+        },
+        src: ['**']
+      }
+    },
+
     watch: {
       html: {
       files: ['src/**/*.html'],
