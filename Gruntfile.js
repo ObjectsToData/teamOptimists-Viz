@@ -24,6 +24,12 @@ module.exports = function(grunt) {
         src: 'scripts/**/*.js',
         dest: 'dist/'
       },
+      fonts: {
+        expand: true,
+        flatten: true,
+        src: 'src/fonts/**/*',
+        dest: 'dist/fonts'
+      },
       images: {
         expand: true,
         flatten: true,
@@ -40,6 +46,10 @@ module.exports = function(grunt) {
     bowercopy: {
       masonry: {
         src: 'masonry/dist/masonry.pkgd.min.js',
+        dest: 'dist/vendor/'
+      },
+      isotope: {
+        src: 'isotope/dist/isotope.pkgd.min.js',
         dest: 'dist/vendor/'
       },
       jquery: {
