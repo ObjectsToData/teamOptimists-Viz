@@ -44,12 +44,12 @@ module.exports = function(grunt) {
       }  
     },
     bowercopy: {
-      masonry: {
-        src: 'masonry/dist/masonry.pkgd.min.js',
-        dest: 'dist/vendor/'
-      },
       isotope: {
         src: 'isotope/dist/isotope.pkgd.min.js',
+        dest: 'dist/vendor/'
+      },
+      jqueryui: {
+        src: 'jquery-ui/jquery-ui.min.js',
         dest: 'dist/vendor/'
       },
       jquery: {
@@ -61,6 +61,16 @@ module.exports = function(grunt) {
         dest: 'dist/vendor/'
       }
     },
+    imagemin: {
+      dynamic: {
+        files: [{
+            expand: true,
+            cwd: 'src/images/',
+            src: ['**/*.{png,jpg,gif}'],
+            dest: 'dist/images/'
+        }]
+      }
+    },
     express: {
       dev: {
         options: {
@@ -68,6 +78,17 @@ module.exports = function(grunt) {
         }
       }
     },
+    'gh-pages': {
+      production: {
+        options: {
+          base: 'dist',
+          branch: 'master',
+          repo: 'git@github.com:ObjectsToData/ObjectsToData.github.io.git'
+        },
+        src: ['**']
+      }
+    },
+
     watch: {
       html: {
       files: ['src/**/*.html'],
@@ -92,7 +113,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('build', ['clean:build', 'copy', 'bowercopy']);
-  grunt.registerTask('default', ['build', 'express', 'watch']);
+  grunt.registerTask('default', ['build', 'express', 'imagemin', 'watch']);
   grunt.registerTask('deploy', ['build', 'gh-pages']);
 
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -101,4 +122,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-express-server');
   grunt.loadNpmTasks('grunt-gh-pages');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
 }

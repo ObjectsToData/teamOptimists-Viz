@@ -1,57 +1,89 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
 	</head>
 	<body>
 
 <header>
 	<h1>Representation of the Orient in the New York Times</h1>
 		<hr>
-	<p class="credits">R. Chavers R. Korteschiel E. Martinius E. van Zummeren
+
+	<p class="credits">R. Chavers R. Korteschiel E. Martinius E. van Zummeren<a href="#" id="twentyfiveSeventyfive"/>25/75 </a><a href="#" id="fiftyFifty"/>50/50 </a><a href="#" id="seventyfiveTwentyfive"/>75/25 </a><a href="#" id="makeGray"/>GRAY </a><a href="#" id="makeColor"/>IK WIL KLEURTJES</a>
+
+	<!--TIIJDELIJK-->
+	<div id="sorts" class="button-group">
+	  <button class="button is-checked" data-sort-value="original-order">original order</button>
+	  <button class="button" data-sort-value="saturation">saturation</button>
+	  <button class="button" data-sort-value="hue">hue</button>
+	  <button class="button" data-sort-value="brightness">brightness</button>
+	  <button class="button" data-sort-value="complexity">complexity</button>
+	</div>
+
 	</p>
 </header>
 
-
-
 <div class="filtercontrol">
+	<div class="filters" class="button-group">
+		<span class="filterdesc">Filters</span>
 
-<div class="filters" class="button-group">
-	<span class="filterdesc">Filters</span>
-
-   <button class="filterbutton" data-filter="*"><img class="icon-eye" src="images/icon_eye.png"/><span class="icon-desc">show all</span></button>
-  <button class="filterbutton" data-filter=".man"><img class="icon-burqa" src="images/icon_burqa.png"/><span class="icon-desc">burqa</span></button>
-  <button class="filterbutton" data-filter=".violence"><img class="icon-violence" src="images/icon_violence.png"/><span class="icon-desc">violence</span></button>
+		<button class="filterbutton" data-filter="*">
+			<img class="icon-eye" src="images/icon_eye.png"/>
+			<span class="icon-desc">show all</span>
+		</button>
+		<button class="filterbutton" data-filter=".man">
+			<img class="icon-burqa" src="images/icon_burqa.png"/>
+			<span class="icon-desc">burqa</span></button>
+		<button class="filterbutton" data-filter=".violence">
+			<img class="icon-violence" src="images/icon_violence.png"/>
+			<span class="icon-desc">violence</span>
+		</button>
+	
+	</div>
 </div>
 
-</div>
-
-
-<div class="floatclear"></div>
-
+<!-- Dit moet nog goed opgelost worden -->
 <img class="imagetag" src="images/imperialism.svg"/>
 
 
-<img class="imagetag floatright" src="images/orientalism.svg"/>
 
+<!-- START ISOTOPES -->
 <div id="container">
-<div id="imperialcountry" class="division">	
-		<div class="shadowgradiant">
 
-		</div>	
+<div id="imperialcountry" class="division">	
+		
+		<div class="shadowgradiant"></div>
+
 		<div class="nytPhoto">
 			<img class="fluid" src="images/us02.jpg" alt="" />
+			<span class="saturation">8</span>
+			<span class="brightness">79</span>
+			<span class="hue">79</span>
+			<span class="complexity">79</span>
 		</div>
 		
 		<div class="nytPhoto man">
 			<img class="fluid" src="images/us03.jpg" alt="" />
+			<span class="saturation">100</span>
+			<span class="brightness">192</span>
+			<span class="hue">23</span>
+			<span class="complexity">82</span>
 		</div>
 		
 		<div class="nytPhoto">
 			<img class="fluid" src="images/us01.jpg" alt="" />
+			<span class="saturation">48</span>
+			<span class="brightness">9</span>
+			<span class="hue">69</span>
+			<span class="complexity">139</span>
 		</div>
 		
 		<div class="nytPhoto">
 			<img class="fluid" src="images/us04.jpg" alt="" />
+			<span class="saturation">1</span>
+			<span class="brightness">19</span>
+			<span class="hue">49</span>
+			<span class="complexity">89</span>
 		</div>
 		
 		<div class="nytPhoto man">
@@ -94,18 +126,32 @@
    
 
 	<div id="orientalcountry" class="division">
-		<div class="shadowgradiant">
-			
-		</div>	
+
+		<img class="imagetag floatright" src="images/orientalism.svg"/>
+
+		<div class="shadowgradiant"></div>	
+
 		<div class="nytPhoto">
 			<img class="fluid" src="images/iq02.jpg" alt="" />
+			<span class="saturation">8</span>
+			<span class="brightness">79</span>
+			<span class="hue">79</span>
+			<span class="complexity">79</span>		
 		</div>
 		
-	<div class="nytPhoto man">
+		<div class="nytPhoto man">
 			<img class="fluid" src="images/iq01.jpg" alt="" />
+			<span class="saturation">2</span>
+			<span class="brightness">39</span>
+			<span class="hue">39</span>
+			<span class="complexity">29</span>		
 		</div>
 		<div class="nytPhoto">
 			<img class="fluid" src="images/iq03.jpg" alt="" />
+			<span class="saturation">4</span>
+			<span class="brightness">719</span>
+			<span class="hue">739</span>
+			<span class="complexity">749</span>
 		</div>
 		<div class="nytPhoto">
 			<img class="fluid" src="images/iq04.jpg" alt="" />
@@ -166,71 +212,161 @@
 		<div class="nytPhoto">
 			<img class="fluid" src="images/iq02.jpg" alt="" />
 		</div>
-		
-		
-		</div>
-		
-	<div class="clearfix"></div>
-	<!--SLUIT CONTAINER -->
+			
 	</div>
-
+		
+<!--SLUIT CONTAINER -->
+</div>
 	
-		<script src="http://designshack.net/tutorialexamples/masonry/js/jquery-1.7.1.min.js"></script>
+		<script src="/vendor/jquery.min.js"></script>
 		<script src="/vendor/isotope.pkgd.min.js"></script>
+		<script src="/vendor/jquery-ui.min.js"></script>
+
 		<script src="/scripts/app.js"></script>
+
 		<script>
-
-
-
-		$(window).load(function(){
-			var $containertwo = $('#imperialcountry');
-			// init
-			$containertwo.isotope({
-			  // options
-			  itemSelector: '.nytPhoto',
-			  layoutMode: 'masonry'
-			});
-// filter items on button click
-$('.filters').on( 'click', 'button', function() {
-  var filterValue = $(this).attr('data-filter');
-  $containertwo.isotope({ filter: filterValue });
-});
-
-
-			var $container = $('#orientalcountry');
-			// init
-			$container.isotope({
-			  // options
-			  itemSelector: '.nytPhoto',
-			  layoutMode: 'masonry'
-			});
-
-// filter items on button click
-$('.filters').on( 'click', 'button', function() {
-  var filterValue = $(this).attr('data-filter');
-  $container.isotope({ filter: filterValue });
-});
-
-
-     
-});
-
-
-$(document).ready(function() {     
-    $('#orientalcountryyeah').hover(function(){     
-        $('#orientalcountryyeah').addClass('extrawidth');
-
-    },
-      
-    function(){    
-        $('#imperialcountry').addClass('losesome'); var $container = $('#orientalcountry').isotope();  
-        var $container = $('#imperialcountry').isotope();  
+// RESIZABLE http://api.jqueryui.com/resizable/
+$(function() {
+    $("#imperialcountry").resizable({
+    	handles: 'e',
+        alsoResizeReverse: "#orientalcountry"
     });
-});   
+});
+
+$( "#imperialcountry" ).resizable({
+		handles: 'e',
+		stop: function() {
+			var $containertwo = $('#imperialcountry');
+			$containertwo.isotope('layout');
+		
+		    var $container = $('#orientalcountry');	
+			$container.isotope('layout');
+	  	}
+});
+
+// INITIALISE ISOTOPES
+// FIRST ISOTOPE
+$(window).load(function(){
+	var $containertwo = $('#imperialcountry');
+	// init
+	$containertwo.isotope({
+		// options
+		itemSelector: '.nytPhoto',
+		layoutMode: 'masonry',
+		getSortData: {
+	    	saturation: '.saturation parseInt',
+	    	hue: '.hue parseInt',
+	    	brightness: '.brightness parseInt',
+	    	complexity: '.complexity parseInt',
+      	}
+	});
+
+	// sort items on button click
+	$('#sorts').on( 'click', 'button', function() {
+		var sortValue = $(this).attr('data-sort-value');
+		$containertwo.isotope({ sortBy: sortValue });
+	});
+
+	// filter items on button click
+	$('.filters').on( 'click', 'button', function() {
+		var filterValue = $(this).attr('data-filter');
+		$containertwo.isotope({ filter: filterValue });
+	});
 
 
+// SECOND ISOTOPE
+	var $container = $('#orientalcountry');
+	// init
+	$container.isotope({
+		// options
+		itemSelector: '.nytPhoto',
+		layoutMode: 'masonry',
+		getSortData: {
+	    	saturation: '.saturation parseInt',
+	    	hue: '.hue parseInt',
+	    	brightness: '.brightness parseInt',
+	    	complexity: '.complexity parseInt',
+      	}
+	});
 
-		$(window).scroll(function(e){ 
+	// sort items on button click
+	$('#sorts').on( 'click', 'button', function() {
+		var sortValue = $(this).attr('data-sort-value');
+		$container.isotope({ sortBy: sortValue });
+	});
+
+	// filter items on button click
+	$('.filters').on( 'click', 'button', function() {
+	  var filterValue = $(this).attr('data-filter');
+	  $container.isotope({ filter: filterValue });
+	});  
+
+}); //closing window load function
+
+// RESIZE ISOTOPES
+// 25% x 75%
+$("#twentyfiveSeventyfive").click(function() {
+    $("#imperialcountry").css( "width", "25%" );
+    $("#imperialcountry").css( "transition", "width .5s linear;" );
+
+    $("#orientalcountry").css( "width", "75%" );
+    $("#orientalcountry").css( "transition", "width .5s linear;" );
+
+    // herpositioneer foto's
+    var $containertwo = $('#imperialcountry');
+	$containertwo.isotope('layout');
+	
+    var $container = $('#orientalcountry');	
+	$container.isotope('layout');
+});
+
+// 50% x 50%
+$("#fiftyFifty").click(function() {
+    $("#imperialcountry").css( "width", "50%" );
+    $("#imperialcountry").css( "transition", "width .5s linear;" );
+
+    $("#orientalcountry").css( "width", "50%" );
+    $("#orientalcountry").css( "transition", "width .5s linear;" );
+
+    // herpositioneer foto's
+    var $containertwo = $('#imperialcountry');
+	$containertwo.isotope('layout');
+	
+    var $container = $('#orientalcountry');	
+	$container.isotope('layout');
+});
+
+// 75% x 25%
+$("#seventyfiveTwentyfive").click(function() {
+    $("#imperialcountry").css( "width", "75%" );
+    $("#imperialcountry").css( "transition", "width .5s linear;" );
+
+    $("#orientalcountry").css( "width", "25%" );
+    $("#orientalcountry").css( "transition", "width .5s linear;" );
+
+    // herpositioneer foto's
+    var $containertwo = $('#imperialcountry');
+	$containertwo.isotope('layout');
+	
+    var $container = $('#orientalcountry');	
+	$container.isotope('layout');
+});
+
+// GRAYSCALE
+$("#makeGray").click(function() {
+	$( ".fluid" ).addClass( "grayscale" );
+});
+
+// COLORS 
+$("#makeColor").click(function() {
+	$( ".fluid" ).removeClass( "grayscale" );
+});
+
+// HANDIG VOOR LATER
+// $( "p" ).removeClass( "myClass noClass" ).addClass( "yourClass" );
+
+// FILTERBAR GLUE TO TOP
+$(window).scroll(function(e){ 
   $el = $('.filtercontrol'); 
   if ($(this).scrollTop() > 200 && $el.css('position') != 'fixed'){ 
     $('.filtercontrol').css({'position': 'fixed', 'top': '0px'}); 
