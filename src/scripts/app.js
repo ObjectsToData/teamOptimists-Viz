@@ -69,3 +69,161 @@ $.ui.plugin.add("resizable", "alsoResizeReverse", {
         $(this).removeData("resizable-alsoresize-reverse");
     }
 });
+
+
+
+
+
+
+// RESIZABLE http://api.jqueryui.com/resizable/
+$(function() {
+    $("#imperialcountry").resizable({
+        handles: 'e',
+        alsoResizeReverse: "#orientalcountry"
+    });
+});
+
+$( "#imperialcountry" ).resizable({
+        handles: 'e',
+        stop: function() {
+            var $containertwo = $('#imperialcountry');
+            $containertwo.isotope('layout');
+        
+            var $container = $('#orientalcountry'); 
+            $container.isotope('layout');
+        }
+});
+
+// INITIALISE ISOTOPES
+// FIRST ISOTOPE
+$(window).load(function(){
+    var $containertwo = $('#imperialcountry');
+    // init
+    $containertwo.isotope({
+        // options
+        itemSelector: '.nytPhoto',
+        layoutMode: 'masonry',
+        getSortData: {
+            saturation: '.saturation parseInt',
+            hue: '.hue parseInt',
+            brightness: '.brightness parseInt',
+            complexity: '.complexity parseInt',
+        }
+    });
+
+    // sort items on button click
+    $('#sorts').on( 'click', 'button', function() {
+        var sortValue = $(this).attr('data-sort-value');
+        $containertwo.isotope({ sortBy: sortValue });
+    });
+
+    // filter items on button click
+    $('.filters').on( 'click', 'button', function() {
+        var filterValue = $(this).attr('data-filter');
+        $containertwo.isotope({ filter: filterValue });
+    });
+
+
+// SECOND ISOTOPE
+    var $container = $('#orientalcountry');
+    // init
+    $container.isotope({
+        // options
+        itemSelector: '.nytPhoto',
+        layoutMode: 'masonry',
+        getSortData: {
+            saturation: '.saturation parseInt',
+            hue: '.hue parseInt',
+            brightness: '.brightness parseInt',
+            complexity: '.complexity parseInt',
+        }
+    });
+
+    // sort items on button click
+    $('#sorts').on( 'click', 'button', function() {
+        var sortValue = $(this).attr('data-sort-value');
+        $container.isotope({ sortBy: sortValue });
+    });
+
+    // filter items on button click
+    $('.filters').on( 'click', 'button', function() {
+      var filterValue = $(this).attr('data-filter');
+      $container.isotope({ filter: filterValue });
+    });  
+
+}); //closing window load function
+
+// RESIZE ISOTOPES
+// 25% x 75%
+$("#twentyfiveSeventyfive").click(function() {
+    $("#imperialcountry").css( "width", "25%" );
+    $("#imperialcountry").css( "transition", "width .5s linear;" );
+
+    $("#orientalcountry").css( "width", "75%" );
+    $("#orientalcountry").css( "transition", "width .5s linear;" );
+
+    // herpositioneer foto's
+    var $containertwo = $('#imperialcountry');
+    $containertwo.isotope('layout');
+    
+    var $container = $('#orientalcountry'); 
+    $container.isotope('layout');
+});
+
+// 50% x 50%
+$("#fiftyFifty").click(function() {
+    $("#imperialcountry").css( "width", "50%" );
+    $("#imperialcountry").css( "transition", "width .5s linear;" );
+
+    $("#orientalcountry").css( "width", "50%" );
+    $("#orientalcountry").css( "transition", "width .5s linear;" );
+
+    // herpositioneer foto's
+    var $containertwo = $('#imperialcountry');
+    $containertwo.isotope('layout');
+    
+    var $container = $('#orientalcountry'); 
+    $container.isotope('layout');
+});
+
+// 75% x 25%
+$("#seventyfiveTwentyfive").click(function() {
+    $("#imperialcountry").css( "width", "75%" );
+    $("#imperialcountry").css( "transition", "width .5s linear;" );
+
+    $("#orientalcountry").css( "width", "25%" );
+    $("#orientalcountry").css( "transition", "width .5s linear;" );
+
+    // herpositioneer foto's
+    var $containertwo = $('#imperialcountry');
+    $containertwo.isotope('layout');
+    
+    var $container = $('#orientalcountry'); 
+    $container.isotope('layout');
+});
+
+// GRAYSCALE
+$("#makeGray").click(function() {
+    $( ".fluid" ).addClass( "grayscale" );
+});
+
+// COLORS 
+$("#makeColor").click(function() {
+    $( ".fluid" ).removeClass( "grayscale" );
+});
+
+// HANDIG VOOR LATER
+// $( "p" ).removeClass( "myClass noClass" ).addClass( "yourClass" );
+
+// FILTERBAR GLUE TO TOP
+$(window).scroll(function(e){ 
+  $el = $('.filtercontrol'); 
+  if ($(this).scrollTop() > 200 && $el.css('position') != 'fixed'){ 
+    $('.filtercontrol').css({'position': 'fixed', 'top': '0px'}); 
+  }
+  if ($(this).scrollTop() < 200 && $el.css('position') == 'fixed')
+  {
+    $('.filtercontrol').css({'position': 'static', 'top': '0px'}); 
+  } 
+});
+
