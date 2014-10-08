@@ -54,6 +54,10 @@ module.exports = function(grunt) {
         src: 'isotope/dist/isotope.pkgd.min.js',
         dest: 'dist/vendor/'
       },
+      imagesloaded: {
+        src: 'imagesloaded/imagesloaded.pkgd.min.js',
+        dest: 'dist/vendor/'
+      },
       jqueryui: {
         src: 'jquery-ui/jquery-ui.min.js',
         dest: 'dist/vendor/'
@@ -108,18 +112,14 @@ module.exports = function(grunt) {
         files: ['src/scripts/**/*.js'],
         tasks: ['copy:scripts']
       },
-      assets: {
-        files: ['src/images/**/*'],
-        tasks: ['copy:images']
-      },
       options: {
         livereload: true  
       }
     }
   });
 
-  grunt.registerTask('build', ['clean:build', 'copy', 'bowercopy']);
-  grunt.registerTask('default', ['build', 'express', 'imagemin', 'watch']);
+  grunt.registerTask('build', ['clean:build', 'copy', 'bowercopy', 'imagemin']);
+  grunt.registerTask('default', ['build', 'express', 'watch']);
   grunt.registerTask('deploy', ['build', 'gh-pages']);
 
   grunt.loadNpmTasks('grunt-contrib-copy');
