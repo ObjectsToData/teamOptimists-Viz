@@ -1,35 +1,14 @@
-<!doctype html>
-<html lang="en-us">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Representation of the Orient in The New York Times</title>
-        <meta name="description" content="Using the NYT-API to explore the representation of the orient in The New York Times. A student project.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
-
-        <link rel="stylesheet" type="text/css" href="styles/main.css">
-		<link rel="stylesheet" type="text/css" href="styles/jqueryui.css">
-    </head>
-
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+	</head>
 	<body>
-		<!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-		<header>
-			<h1>Representation of the Orient in The New York Times</h1>
-			<hr>
-			<p class="credits">R. Chavers R. Korteschiel E. Martinius E. van Zummeren<a href="#" id="twentyfiveSeventyfive"/>25/75 </a><a href="#" id="fiftyFifty"/>50/50 </a><a href="#" id="seventyfiveTwentyfive"/>75/25 </a><a href="#" id="makeGray"/>GRAY </a><a href="#" id="makeColor"/>IK WIL KLEURTJES</a></p>
 
-			<!--TIIJDELIJK-->
-			<div id="sorts" class="button-group">
-			  <button class="button is-checked" data-sort-value="original-order">original order</button>
-			  <button class="button" data-sort-value="saturation">saturation</button>
-			  <button class="button" data-sort-value="hue">hue</button>
-			  <button class="button" data-sort-value="brightness">brightness</button>
-			  <button class="button" data-sort-value="complexity">complexity</button>
-			</div>
+		<header>
+			<h1>Representation of the Orient in the New York Times</h1>
+			<hr>
+			<p class="credits">R. Chavers R. Korteschiel E. Martinius E. van Zummeren<a href="#" id="twentyfiveSeventyfive"/>25/75 </a><a href="#" id="fiftyFifty"/>50/50 </a><a href="#" id="seventyfiveTwentyfive"/>75/25 </a><a href="#" id="makeGray"/>GRAY </a><a href="#" id="makeColor"/>IK WIL KLEURTJES</a><a href="#" />ANDER LAND</a><a id="shuffle-button" href="#"/> SHUFFLEBUFFEL</a></p>
 
 		</header>
 
@@ -41,24 +20,56 @@
 					<img class="icon-eye" src="images/icon_eye.png"/>
 					<span class="icon-desc">show all</span>
 				</button>
+
 				<button class="filterbutton" data-filter=".man">
 					<img class="icon-burqa" src="images/icon_burqa.png"/>
 					<span class="icon-desc">burqa</span></button>
+
 				<button class="filterbutton" data-filter=".violence">
 					<img class="icon-violence" src="images/icon_violence.png"/>
 					<span class="icon-desc">violence</span>
 				</button>
 			</div>
+
+			<div class="sortbar">
+				<div id="sorts" class="button-group">
+				<span class="sortdesc">Sort</span>
+
+			
+			  <button class="sortbutton is-checked tooltip" title="Original order" data-sort-value="original-order">
+			  		<img class="sorticon icon-original" src="images/icon_original.png"/>
+			  </button>
+			  <button id="shuffle-button" class="sortbutton tooltip" title="Shuffle">
+					<img class="sorticon icon-shuffle" src="images/icon_shuffle.png"/>
+			  </button>
+			  <button class="sortbutton tooltip" title="Sort by brightness" data-sort-value="brightness">
+					<img class="sorticon icon-brightness" src="images/icon_brightness.png"/>
+			  </button>
+			  <button class="sortbutton tooltip" title="Sort by hue" data-sort-value="hue">
+					<img class="sorticon icon-hue" src="images/icon_hue.png"/>
+			  </button>
+			  <button class="sortbutton tooltip" title="Sort by saturation" data-sort-value="saturation">
+					<img class="sorticon icon-saturation" src="images/icon_saturation.png"/>
+			  </button>
+			  <button class="sortbutton tooltip" title="Sort by the number of shapes" data-sort-value="shapes">
+			  		<img class="sorticon icon-shapes" src="images/icon_shapes.png"/>
+			  </button>
+			</div>
+
+			</div>
 		</section>
 
 		<!-- Dit moet nog goed opgelost worden -->
-		<img class="imagetag" src="images/imperialism.svg"/>
+		
 
 		<!-- START ISOTOPES -->
 		<main id="container">
 
-			<section id="imperialcountry" class="division">	
-				
+			<section id="imperialcountry" class="division">
+					<div class="countrylist">
+			<a href="#" id="imperialClick"><img class="countrylistLoop" src="images/countrylist_loop.svg"/></a>
+		</div>	
+				<img id="imperialUsa" class="imagetag" src="images/imperialism.svg"/>
 				<div class="shadowgradiant"></div>
 
 				<div class="nytPhoto">
@@ -130,9 +141,6 @@
 			</section>
 
 			<section id="orientalcountry" class="division">
-				<div class="countrylist">
-					<img class="countrylistLoop" src="images/countrylist_loop.svg"/>
-				</div>
 				<img class="imagetag floatright" src="images/orientalism.svg"/>
 				<div class="shadowgradiant"></div>	
 
@@ -224,5 +232,41 @@
 		<script src="/vendor/isotope.pkgd.min.js"></script>
 		<script src="/vendor/jquery-ui.min.js"></script>
 		<script src="/scripts/app.js"></script>
+
+		<script>
+
+
+		function importData() {
+			var data = $.ajax({
+				url: "data/countryData.json",
+				dataType: "json",
+				success: function(data){
+					console.log(data);
+					imperialImages(data);
+				},
+				error: function(obj, err, errObj){
+					console.error("Loading the JSON did not go as planned: " + err);
+				}
+			});
+			return data;
+		}
+
+		var data = importData();
+
+		function imperialImages(data) {
+    	// Creating one long string with all images.
+    	var imgTags = "";
+
+    	$(data).each(function(){
+    		imgTags += "<div class=\"nytPhoto\"><img class=\"fluid\" src=\"" +this.url+ "\"/></div>";
+    	});
+
+    	// Appending to HTML and event listener.
+    	$("#imperialcountry").html(imgTags);
+
+       	
+    }
+
+		</script>
 	</body>
 </html>

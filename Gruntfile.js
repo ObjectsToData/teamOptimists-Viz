@@ -24,11 +24,23 @@ module.exports = function(grunt) {
         src: 'scripts/**/*.js',
         dest: 'dist/'
       },
+      data: {
+        expand: true,
+        cwd: 'src',
+        src: 'data/**/*.json',
+        dest: 'dist/'
+      },
       fonts: {
         expand: true,
         flatten: true,
         src: 'src/fonts/**/*',
         dest: 'dist/fonts'
+      },
+      images: {
+        expand: true,
+        flatten: true,
+        src: 'src/images/**/*',
+        dest: 'dist/images'
       },
       styles: {
         expand: true,
@@ -60,7 +72,7 @@ module.exports = function(grunt) {
         files: [{
             expand: true,
             cwd: 'src/images/',
-            src: ['**/*.{png,jpg,gif,svg}'],
+            src: ['**/*.{png,jpg,gif}'],
             dest: 'dist/images/'
         }]
       }

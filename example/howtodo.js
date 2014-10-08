@@ -26,11 +26,11 @@
     	var imgTags = "";
 
     	$(data.photos).each(function(){
-    		imgTags += "<img src=\"" +this.src+ "\" alt=\"" +this.name+ "\" " + "data=\""+this.number+ "\" >";
+    		imgTags += "<div class="nytPhoto"><img class="fluid" src=\"" +this.url+ "\"/></div>";
     	});
 
     	// Appending to HTML and event listener.
-    	$("#galleryCaseStudy").html(imgTags).on("click", "img", data, galleryChange);
+    	$("#imperialcountry").html(imgTags).on("click", "img", data, galleryChange);
 
     	// Running Owl.
     	owlCarouselConfig();    	
