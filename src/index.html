@@ -94,7 +94,7 @@
 
 		function importDataChina() {
 			var data = $.ajax({
-				url: "data/URLUnited+States.json",
+				url: "data/linkUpdatedValidJSONUnited+States.json",
 				dataType: "json",
 				success: function(data){
 					console.log(data);
@@ -109,7 +109,7 @@
 
 		function importDataIran() {
 			var data2 = $.ajax({
-				url: "data/URLSouth+Korea.json",
+				url: "data/linkUpdatedValidJSONAfghanistan.json",
 				dataType: "json",
 				success: function(data){
 					console.log(data);
@@ -129,8 +129,8 @@
     		// Creating one long string with all images.
 	    	var imgTags = "";
 
-	    	$(data).each(function(){
-	    		imgTags += "<div class=\"nytPhoto\"><img class=\"fluid\" src=\"images/" +this.url+ "\"/></div>";
+	    	$(data.docs).each(function(){
+	    		imgTags += "<div class=\"nytPhoto\"><img class=\"fluid\" src=\"images/" +this.multimedia[1].url + "\"/></div>";
 	    	});
 
 	    	// Appending to HTML and event listener.
