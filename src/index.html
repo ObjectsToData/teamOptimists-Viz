@@ -5,15 +5,15 @@
 	</head>
 	<body>
 
-		<header>
-			<h1>Representation of the Orient in the New York Times</h1>
-			<hr>
+<!-- 		<header>
 			<p class="credits">R. Chavers R. Korteschiel E. Martinius E. van Zummeren<a href="#" id="twentyfiveSeventyfive"/>25/75 </a><a href="#" id="fiftyFifty"/>50/50 </a><a href="#" id="seventyfiveTwentyfive"/>75/25 </a><a href="#" id="makeGray"/>GRAY </a><a href="#" id="makeColor"/>IK WIL KLEURTJES</a><a href="#" />ANDER LAND</a><a id="shuffle-button" href="#"/> SHUFFLEBUFFEL</a></p>
 
-		</header>
+		</header> -->
 
 		<section class="filtercontrol">
-			<div class="filters" class="button-group">
+			<img class="logo" src="images/logo.svg"/>
+			<a href="#" id="fiftyFifty"/>50/50 </a>
+<!-- 			<div class="filters" class="button-group">
 				<span class="filterdesc">Filters</span>
 
 				<button class="filterbutton" data-filter="*">
@@ -28,7 +28,7 @@
 				<button class="filterbutton" data-filter=".violence">
 					<img class="icon-violence" src="images/icon_violence.png"/>
 					<span class="icon-desc">violence</span>
-				</button>
+				</button> -->
 			</div>
 
 			<div class="sortbar">
@@ -54,8 +54,26 @@
 			  <button class="sortbutton tooltip" title="Sort by the number of shapes" data-sort-value="shapes">
 			  		<img class="sorticon icon-shapes" src="images/icon_shapes.png"/>
 			  </button>
+			  <button class="sortbutton tooltip" title="Sort by length of corresponding article" data-sort-value="articlelength">
+			  		<img class="sorticon icon-shapes" src="images/icon_shapes.png"/>
+			  </button>
 			</div>
+				<div id="layout">
+					<span class="sortdesc">Layout<form style="display: inline;">
+  <select class="changeOrientalCountry">
+    <option value="afghanistan" selected="selected">Afghanistan</option>
+    <option value="china">China</option>
+    <option value="egypt">Egypt</option>
+    <option value="iran">Iran</option>
+  </select>
+</form>
+					</span>
+					<ul class="layoutul">
+						<li class="widthli">Width ratio</li>
+						<li class="columnsli">Columns</li>
+					</ul>
 
+				</div>
 			</div>
 		</section>
 
@@ -66,17 +84,19 @@
 		<main id="container">
 
 			<section id="imperialcountry" class="division">
-				<div class="countrylist">
-					<a href="#" id="imperialClick"><img class="countrylistLoop" src="images/countrylist_loop.svg"/></a>
-				</div>	
-
+					
 				<img id="imperialUsa" class="imagetag" src="images/imperialism.svg"/>
 				<div class="shadowgradiant"></div>
 
 			</section>
 
 			<section id="orientalcountry" class="division">
-				<img class="imagetag floatright" src="images/orientalism.svg"/>
+				<div class="countrylist">
+					<a href="#" id="imperialClick"><img class="countrylistLoop" src="images/countrylist_loop.svg"/></a>
+					
+
+				</div>
+				<img class="imagetag orientaltag floatright" src="images/orientalism.svg"/>
 				<div class="shadowgradiant"></div>	
 
 				
@@ -92,13 +112,13 @@
 		<script>
 
 
-		function importDataChina() {
+		function importDataImperial() {
 			var data = $.ajax({
 				url: "data/linkUpdatedValidJSONUnited+States.json",
 				dataType: "json",
 				success: function(data){
 					console.log(data);
-					imperialImages(data, "China");
+					imperialImages(data, "Imperial");
 				},
 				error: function(obj, err, errObj){
 					console.error("Loading the JSON did not go as planned: " + err);
@@ -107,13 +127,13 @@
 			return data;
 		}
 
-		function importDataIran() {
+		function importDataOriental() {
 			var data2 = $.ajax({
-				url: "data/linkUpdatedValidJSONAfghanistan.json",
+				url: "data/linkUpdatedValidJSONEgypt.json",
 				dataType: "json",
 				success: function(data){
 					console.log(data);
-					imperialImages(data, "Iran");
+					imperialImages(data, "Oriental");
 				},
 				error: function(obj, err, errObj){
 					console.error("Loading the JSON did not go as planned: " + err);
@@ -122,27 +142,89 @@
 			return data2;
 		}
 
-		var data = importDataChina();
-		var data2 = importDataIran();
+		var data = importDataImperial();
+		var data2 = importDataOriental();
 
 		function imperialImages(data, country) {
     		// Creating one long string with all images.
 	    	var imgTags = "";
 
 	    	$(data.docs).each(function(){
-	    		imgTags += "<div class=\"nytPhoto\"><img class=\"fluid\" src=\"images/" +this.multimedia[1].url + "\"/></div>";
+	    		imgTags += "<div class=\"nytPhoto nytTooltip\" title=\"&lt;span class=&quot;nytTimestamp&quot;&gt;" +this.pub_date + "&lt;/span&gt; &lt;h5 class=&quot;nytHeading&quot;&gt;" +this.headline.main + "&lt;/h5&gt; &lt;p class=&quot;nytSnippet&quot;&gt;" +this.snippet + " &lt;span class=&quot;nytWordcount&quot;&gt;[" +this.word_count + " words]&lt;/span&gt;&lt;/p&gt;\"><a href=\"" +this.web_url + "\" target=\"_blank\"><img class=\"fluid\" src=\"images/" +this.multimedia[1].url + "\"/></a><span class=\"saturation\">8</span><span class=\"brightness\">79</span><span class=\"hue\">79</span><span class=\"shapes\">79</span><span class=\"articlelength\">" +this.word_count + "</span></div>";
 	    	});
 
 	    	// Appending to HTML and event listener.
-	    	if (country == "China"){
+	    	if (country == "Imperial"){
 	    		$("#imperialcountry").append(imgTags);
-	    	} else if (country == "Iran") {
+	    	} else if (country == "Oriental") {
 	    		console.log("im run!");
 	    		$("#orientalcountry").append(imgTags);
 	    		isotopeResize();
 	    	}
     	}
 
+$( ".changeOrientalCountry" ).change(function() {
+  	console.log( "Handler for .change() called." );
+      
+  	// del isotope elements
+      var $container = $('#orientalcountry');
+      var elems = $container.isotope('getItemElements')
+	  $container.isotope( 'remove', elems );
+
+	  // fadeout imagetag
+	  $(".orientaltag").addClass('gone');
+
+	  // still have to delete oriental tag thou, with timer
+
+
+
+	  	//country select
+		if ($(this).find('option:selected').val() === 'iran') {
+        console.log( "Iran geselecteerd" );
+
+		        function importDataOriental() {
+					var data2 = $.ajax({
+						url: "data/linkUpdatedValidJSONIran.json",
+						dataType: "json",
+						success: function(data){
+							console.log(data);
+							imperialImages(data, "Oriental");
+						},
+						error: function(obj, err, errObj){
+							console.error("Loading the JSON did not go as planned: " + err);
+						}
+					});
+					return data2;
+				}
+
+
+			var data2 = importDataOriental();
+
+		function imperialImages(data, country) {
+    		// Creating one long string with all images.
+	    	var imgTags = "";
+
+	    	$(data.docs).each(function(){
+	    		imgTags += "<div class=\"nytPhoto nytTooltip\" title=\"&lt;span class=&quot;nytTimestamp&quot;&gt;" +this.pub_date + "&lt;/span&gt; &lt;h5 class=&quot;nytHeading&quot;&gt;" +this.headline.main + "&lt;/h5&gt; &lt;p class=&quot;nytSnippet&quot;&gt;" +this.snippet + " &lt;span class=&quot;nytWordcount&quot;&gt;[" +this.word_count + " words]&lt;/span&gt;&lt;/p&gt;\"><a href=\"" +this.web_url + "\" target=\"_blank\"><img class=\"fluid\" src=\"images/" +this.multimedia[1].url + "\"/></a><span class=\"saturation\">8</span><span class=\"brightness\">79</span><span class=\"hue\">79</span><span class=\"shapes\">79</span><span class=\"articlelength\">" +this.word_count + "</span></div>";
+	    	});
+
+// Imgtags aan de isotope taggen
+
+		// Volgens mij heb je deze nodig
+		// http://isotope.metafizzy.co/methods.html#appended
+
+		$('#orientalcountry').append(imgTags).isotope('appended', imgTags); 
+
+        var $containertwo = $('#imperialcountry');
+        $containertwo.isotope('layout');
+
+			isotopeResize();
+		    console.log( "Oriental isotope" );
+
+        // http://stackoverflow.com/questions/16170828/jquery-get-values-of-checked-checkboxes-into-array
+		}
+	}
+});
 		</script>
 	</body>
 </html>
