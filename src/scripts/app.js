@@ -45,13 +45,11 @@ function createCountry(data, country) {
   // Appending to HTML
   if (country == "United+States"){
     $containerImperial.append(imgTagsHTML).imagesLoaded( function(){
-      $containerImperial.isotope("appended", imgTagsHTML);
-      $containerImperial.isotope('layout');
+      $containerImperial.isotope("appended", imgTagsHTML).isotope('layout');
     });
   } else {
     $containerOriental.append(imgTagsHTML).imagesLoaded( function(){
-      $containerOriental.isotope("appended", imgTagsHTML);
-      $containerOriental.isotope('layout');
+      $containerOriental.isotope("appended", imgTagsHTML).isotope('layout');
     });
   }
 }
