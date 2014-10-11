@@ -16,6 +16,9 @@ var countryData = {};
 countryData.US = importDataAndCreateCountry("United+States");
 countryData.Turkey = importDataAndCreateCountry("Turkey");
 
+// Eventlistener with function to change country
+$(".changeOrientalCountry").change(changeCountry);
+
 function importDataAndCreateCountry(country) {
   var data = $.ajax({
     url: "data/linkUpdatedValidJSON" + country + ".json",
@@ -53,8 +56,7 @@ function createCountry(data, country) {
   }
 }
 
-// Eventlistener with function to change country
-$(".changeOrientalCountry").change(function() {         
+function changeCountry() {
   // del isotope elements
   var $container = $('#orientalcountry');
   var elems = $container.isotope('getItemElements');
@@ -67,7 +69,8 @@ $(".changeOrientalCountry").change(function() {
 
   var selectedCountry = $(this).find('option:selected').val();
   countryData[selectedCountry] = importDataAndCreateCountry(selectedCountry);
-});
+}
+
 
 
 
