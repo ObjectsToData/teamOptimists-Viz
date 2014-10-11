@@ -127,7 +127,7 @@ hr {
 	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
 	display: -ms-flexbox;      /* TWEENER - IE 10 */
 	display: -webkit-flex;     /* NEW - Chrome */
-	display: flex; 
+	display: flex;
 }
 .sorticon {
 	margin-left: 8px;
@@ -163,6 +163,7 @@ hr {
 	display: inline-block;
 
 }
+
 ul li {
 	display: inline;
 }
@@ -258,19 +259,25 @@ ul li {
 	min-height: 300px;
 }
 	/* new clearfix */
-	.clearfix:after {
-		visibility: hidden;
-		display: block;
-		font-size: 0;
-		content: " ";
-		clear: both;
-		height: 0;
-	}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
 .division {
 	width: 50%;
 	background: black;
 	float: left;
 }
+#imperialcountry {
+	width: 50%;
+	float: left;
+	background: black !important;
+}
+
 #orientalcountry {
 	width: 50%;
 	float: left;
@@ -293,18 +300,18 @@ ul li {
 	width: 100%;
 	opacity: 1.0;
 }
-	.orientaltag {
-		opacity: 1.0;
-	}
-	.gone {
-		opacity: 0;
-		 transition: opacity .25s ease-in-out;
-   -moz-transition: opacity .25s ease-in-out;
-   -webkit-transition: opacity .25s ease-in-out;
-	}
-	.fluid:hover {
-		opacity: 0.4;
-	}
+.orientaltag {
+	opacity: 1.0;
+}
+.gone {
+	opacity: 0;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+}
+.fluid:hover {
+	opacity: 0.4;
+}
 .countrylist {
 	background-image:url('../images/countrylist_shadow.png');
 	background-repeat: no-repeat;
@@ -344,18 +351,18 @@ ul li {
 	opacity: 1.0;
    -webkit-transition: opacity .25s ease-in-out;
 }
-	#orientalcountry:hover > .shadowgradiant {
-		opacity: 0.8;
-		transition: opacity .25s ease-in-out;
-		-moz-transition: opacity .25s ease-in-out;
-		-webkit-transition: opacity .25s ease-in-out;
-	}
-	#imperialcountry:hover > .shadowgradiant {
-		opacity: 0.8;
-		transition: opacity .25s ease-in-out;
-		-moz-transition: opacity .25s ease-in-out;
-		-webkit-transition: opacity .25s ease-in-out;
-	}
+#orientalcountry:hover > .shadowgradiant {
+	opacity: 0.8;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+}
+#imperialcountry:hover > .shadowgradiant {
+	opacity: 0.8;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+}
 
 /* SLIDER */
 .ui-resizable-e {
@@ -376,6 +383,7 @@ ul li {
 
 
 /* CONTENT NYTTOOLTIP */
+
 .nytTimestamp {
 	margin-top: 5px;
 }
