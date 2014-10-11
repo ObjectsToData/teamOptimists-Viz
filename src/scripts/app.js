@@ -58,9 +58,8 @@ function createCountry(data, country) {
 
 function changeCountry() {
   // del isotope elements
-  var $container = $('#orientalcountry');
-  var elems = $container.isotope('getItemElements');
-  $container.isotope( 'remove', elems );
+  var elems = $containerOriental.isotope('getItemElements');
+  $containerOriental.isotope( 'remove', elems );
 
   // fadeout imagetag
   $(".orientaltag").addClass('gone');
