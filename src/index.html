@@ -1,47 +1,59 @@
 <html>
 	<head>
+	<title>Representation of the Orient in The New York Times</title>
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" href="styles/grid.css">
 		<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
 	</head>
 	<body>
 
 <!-- 		<header>
-			<p class="credits">R. Chavers R. Korteschiel E. Martinius E. van Zummeren<a href="#" id="twentyfiveSeventyfive"/>25/75 </a><a href="#" id="fiftyFifty"/>50/50 </a><a href="#" id="seventyfiveTwentyfive"/>75/25 </a><a href="#" id="makeGray"/>GRAY </a><a href="#" id="makeColor"/>IK WIL KLEURTJES</a><a href="#" />ANDER LAND</a><a id="shuffle-button" href="#"/> SHUFFLEBUFFEL</a></p>
+			<p class="credits"><a href="#" id="makeGray"/>GRAY </a><a href="#" id="makeColor"/>IK WIL KLEURTJES</a><a href="#" />ANDER LAND</a><a id="shuffle-button" href="#"/> SHUFFLEBUFFEL</a></p>
 
 		</header> -->
 
+		<section class="websiteContent">
+			<div class="container">
+				<div class="col-md-9">
+					sdsd
+				</div>
+				<div class="col-md-3">
+					<h3>Team</h3>
+					<ul>
+						<li>Reika Chavers</li>
+						<li>Robert-Jan Korteschiel</li>
+						<li>Evelijn Martinius</li>
+						<li>Erik van Zummeren</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
 		<section class="filtercontrol">
 			<img class="logo" src="images/logo.svg"/>
-			<a href="#" id="fiftyFifty"/>50/50 </a>
-<!-- 			<div class="filters" class="button-group">
-				<span class="filterdesc">Filters</span>
 
-				<button class="filterbutton" data-filter="*">
-					<img class="icon-eye" src="images/icon_eye.png"/>
-					<span class="icon-desc">show all</span>
-				</button>
+			<nav class="mainNav">
+				<ul>
+					<li><a class="menuclick" href="#">About</a></li>
+					<li><a href="#" id="shuffle-button">Team</a></li>
+					<li>Share</li>
+				</ul>
+			</nav>
 
-				<button class="filterbutton" data-filter=".man">
-					<img class="icon-burqa" src="images/icon_burqa.png"/>
-					<span class="icon-desc">burqa</span></button>
-
-				<button class="filterbutton" data-filter=".violence">
-					<img class="icon-violence" src="images/icon_violence.png"/>
-					<span class="icon-desc">violence</span>
-				</button> -->
 			</div>
 
 			<div class="sortbar">
-				<div id="sorts" class="button-group">
 				<span class="sortdesc">Sort</span>
+
+				<div id="sorts" class="button-group">
 
 			
 			  <button class="sortbutton is-checked tooltip" title="Original order" data-sort-value="original-order">
 			  		<img class="sorticon icon-original" src="images/icon_original.png"/>
 			  </button>
-			  <button id="shuffle-button" class="sortbutton tooltip" title="Shuffle">
+			  <a class="shuffle-button" class="sortbutton tooltip" title="Shuffle">
 					<img class="sorticon icon-shuffle" src="images/icon_shuffle.png"/>
-			  </button>
+			  </a>
 			  <button class="sortbutton tooltip" title="Sort by brightness" data-sort-value="brightness">
 					<img class="sorticon icon-brightness" src="images/icon_brightness.png"/>
 			  </button>
@@ -58,22 +70,49 @@
 			  		<img class="sorticon icon-shapes" src="images/icon_shapes.png"/>
 			  </button>
 			</div>
-				<div id="layout">
-					<span class="sortdesc">Layout<form style="display: inline;">
-  <select class="changeOrientalCountry">
-    <option value="afghanistan" selected="selected">Afghanistan</option>
-    <option value="china">China</option>
-    <option value="egypt">Egypt</option>
-    <option value="iran">Iran</option>
-  </select>
-</form>
+				<div class="layout">
+					<span class="layoutdesc"><input id="cleangui" type="checkbox" checked="checked">
+Layout
 					</span>
-					<ul class="layoutul">
-						<li class="widthli">Width ratio</li>
-						<li class="columnsli">Columns</li>
-					</ul>
+
+<nav>
+  <ul class="layoutul">
+    <li class="widthli">
+    	<a href="#"><img src="images/icon_width.png"/>Width ratio</a>
+
+<ul class="fallback dropdown">
+        <li><a href="#" id="fiftyFifty"/>50% / 50% </a>
+</li>
+        <li><a href="#" id="twentyfiveSeventyfive">25% /  75%</a></li>
+        <li><a href="#" id="seventyfiveTwentyfive">75% / 25%</a></li>
+      </ul>
+    </li>
+    	
+    <li>
+      <a class="columnsli" href="#"><img src="images/icon_columns.png"/>Columns</a>
+      <ul class="fallback dropdown">
+        <li><a id="twoColumns" href="#">Two columns</a></li>        
+        <li><a id="threeColumns" href="#">Three columns</a></li>
+        <li><a id="fourColumns" href="#">Four columns</a></li>
+        <li><a id="fiveColumns" href="#">Five columns</a></li>
+        <li><a id="sixColumns" href="#">Six columns</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
 
 				</div>
+<div class="visual">
+				<span class="layoutdesc">Visual</span>
+
+			
+			 
+			</div>
+
+
+
 			</div>
 		</section>
 
@@ -93,7 +132,19 @@
 			<section id="orientalcountry" class="division">
 				<div class="countrylist">
 					<a href="#" id="imperialClick"><img class="countrylistLoop" src="images/countrylist_loop.svg"/></a>
-					
+					<form style="display: inline;">
+					  <select class="changeOrientalCountry">
+					    <option value="Afghanistan">Afghanistan</option>
+					    <option value="China">China</option>
+					    <option value="Egypt">Egypt</option>
+					    <option value="Iran">Iran</option>
+					    <option value="Lebanon">Lebanon</option>
+					    <option value="Qatar">Qatar</option>
+					    <option value="South+Korea">South Korea</option>
+					  	<option value="Syria">Syria</option>
+					    <option value="Turkey">Turkey</option>
+					  </select>
+					</form>
 
 				</div>
 				<img class="imagetag orientaltag floatright" src="images/orientalism.svg"/>
@@ -108,123 +159,7 @@
 		<script src="/vendor/imagesloaded.pkgd.min.js"></script>
 		<script src="/vendor/jquery-ui.min.js"></script>
 		<script src="/scripts/app.js"></script>
+		<script src="/scripts/website.js"></script>
 
-		<script>
-
-
-		function importDataImperial() {
-			var data = $.ajax({
-				url: "data/linkUpdatedValidJSONUnited+States.json",
-				dataType: "json",
-				success: function(data){
-					console.log(data);
-					imperialImages(data, "Imperial");
-				},
-				error: function(obj, err, errObj){
-					console.error("Loading the JSON did not go as planned: " + err);
-				}
-			});
-			return data;
-		}
-
-		function importDataOriental() {
-			var data2 = $.ajax({
-				url: "data/linkUpdatedValidJSONEgypt.json",
-				dataType: "json",
-				success: function(data){
-					console.log(data);
-					imperialImages(data, "Oriental");
-				},
-				error: function(obj, err, errObj){
-					console.error("Loading the JSON did not go as planned: " + err);
-				}
-			});
-			return data2;
-		}
-
-		var data = importDataImperial();
-		var data2 = importDataOriental();
-
-		function imperialImages(data, country) {
-    		// Creating one long string with all images.
-	    	var imgTags = "";
-
-	    	$(data.docs).each(function(){
-	    		imgTags += "<div class=\"nytPhoto nytTooltip\" title=\"&lt;span class=&quot;nytTimestamp&quot;&gt;" +this.pub_date + "&lt;/span&gt; &lt;h5 class=&quot;nytHeading&quot;&gt;" +this.headline.main + "&lt;/h5&gt; &lt;p class=&quot;nytSnippet&quot;&gt;" +this.snippet + " &lt;span class=&quot;nytWordcount&quot;&gt;[" +this.word_count + " words]&lt;/span&gt;&lt;/p&gt;\"><a href=\"" +this.web_url + "\" target=\"_blank\"><img class=\"fluid\" src=\"images/" +this.multimedia[1].url + "\"/></a><span class=\"saturation\">8</span><span class=\"brightness\">79</span><span class=\"hue\">79</span><span class=\"shapes\">79</span><span class=\"articlelength\">" +this.word_count + "</span></div>";
-	    	});
-
-	    	// Appending to HTML and event listener.
-	    	if (country == "Imperial"){
-	    		$("#imperialcountry").append(imgTags);
-	    	} else if (country == "Oriental") {
-	    		console.log("im run!");
-	    		$("#orientalcountry").append(imgTags);
-	    		isotopeResize();
-	    	}
-    	}
-
-$( ".changeOrientalCountry" ).change(function() {
-  	console.log( "Handler for .change() called." );
-      
-  	// del isotope elements
-      var $container = $('#orientalcountry');
-      var elems = $container.isotope('getItemElements')
-	  $container.isotope( 'remove', elems );
-
-	  // fadeout imagetag
-	  $(".orientaltag").addClass('gone');
-
-	  // still have to delete oriental tag thou, with timer
-
-
-
-	  	//country select
-		if ($(this).find('option:selected').val() === 'iran') {
-        console.log( "Iran geselecteerd" );
-
-		        function importDataOriental() {
-					var data2 = $.ajax({
-						url: "data/linkUpdatedValidJSONIran.json",
-						dataType: "json",
-						success: function(data){
-							console.log(data);
-							imperialImages(data, "Oriental");
-						},
-						error: function(obj, err, errObj){
-							console.error("Loading the JSON did not go as planned: " + err);
-						}
-					});
-					return data2;
-				}
-
-
-			var data2 = importDataOriental();
-
-		function imperialImages(data, country) {
-    		// Creating one long string with all images.
-	    	var imgTags = "";
-
-	    	$(data.docs).each(function(){
-	    		imgTags += "<div class=\"nytPhoto nytTooltip\" title=\"&lt;span class=&quot;nytTimestamp&quot;&gt;" +this.pub_date + "&lt;/span&gt; &lt;h5 class=&quot;nytHeading&quot;&gt;" +this.headline.main + "&lt;/h5&gt; &lt;p class=&quot;nytSnippet&quot;&gt;" +this.snippet + " &lt;span class=&quot;nytWordcount&quot;&gt;[" +this.word_count + " words]&lt;/span&gt;&lt;/p&gt;\"><a href=\"" +this.web_url + "\" target=\"_blank\"><img class=\"fluid\" src=\"images/" +this.multimedia[1].url + "\"/></a><span class=\"saturation\">8</span><span class=\"brightness\">79</span><span class=\"hue\">79</span><span class=\"shapes\">79</span><span class=\"articlelength\">" +this.word_count + "</span></div>";
-	    	});
-
-// Imgtags aan de isotope taggen
-
-		// Volgens mij heb je deze nodig
-		// http://isotope.metafizzy.co/methods.html#appended
-
-		$('#orientalcountry').append(imgTags).isotope('appended', imgTags); 
-
-        var $containertwo = $('#imperialcountry');
-        $containertwo.isotope('layout');
-
-			isotopeResize();
-		    console.log( "Oriental isotope" );
-
-        // http://stackoverflow.com/questions/16170828/jquery-get-values-of-checked-checkboxes-into-array
-		}
-	}
-});
-		</script>
 	</body>
 </html>
