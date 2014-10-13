@@ -43,7 +43,7 @@ $(".changeOrientalCountry").change(changeCountry);
 
 function importDataAndCreateCountry(country) {
   var data = $.ajax({
-    url: "data/linkUpdatedValidJSON" + country + ".json",
+    url: "data/prettyCombined-" + country + ".json",
     dataType: "json",
     success: function(data){
       createCountry(data, country);
