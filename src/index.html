@@ -3,7 +3,7 @@
 	<title>Representation of the Orient in The New York Times</title>
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
 		<link rel="stylesheet" type="text/css" href="styles/grid.css">
-		<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="styles/jqueryui.css">
 	</head>
 	<body>
 
@@ -13,9 +13,19 @@
 		</header> -->
 
 		<section class="websiteContent">
+						<div class="ladiela">
+
 			<div class="container">
 				<div class="col-md-9">
-					sdsd
+					<img src="images/logo_wit.svg" style="
+    margin-top: 20px;
+">
+					<img src="images/tijdelijk_theoretical.png" style="
+    margin-top: 50px;
+">
+					<img src="images/tijdelijk_howitsdone.png" style="
+    margin-top: 30px;
+">
 				</div>
 				<div class="col-md-3">
 					<h3>Team</h3>
@@ -26,6 +36,7 @@
 						<li>Erik van Zummeren</li>
 					</ul>
 				</div>
+			</div>
 			</div>
 		</section>
 
@@ -48,7 +59,7 @@
 				<div id="sorts" class="button-group">
 
 			
-			  <button class="sortbutton is-checked tooltip" title="Original order" data-sort-value="original-order">
+			  <button class="sortbutton is-checked tooltip exceptionButton" title="Original order" data-sort-value="original-order">
 			  		<img class="sorticon icon-original" src="images/icon_original.png"/>
 			  </button>
 			  <a class="shuffle-button" class="sortbutton tooltip" title="Shuffle">
@@ -66,19 +77,19 @@
 			  <button class="sortbutton tooltip" title="Sort by the number of shapes" data-sort-value="shapes">
 			  		<img class="sorticon icon-shapes" src="images/icon_shapes.png"/>
 			  </button>
-			  <button class="sortbutton tooltip" title="Sort by length of corresponding article" data-sort-value="articlelength">
-			  		<img class="sorticon icon-shapes" src="images/icon_shapes.png"/>
+			  <button class="sortbutton tooltip exceptionButton" title="Sort by length of corresponding article" data-sort-value="articlelength">
+			  		<img class="sorticon icon-shapes" src="images/icon_articlelength.png"/>
 			  </button>
 			</div>
 				<div class="layout">
-					<span class="layoutdesc"><input id="cleangui" type="checkbox" checked="checked">
+					<span class="layoutdesc">
 Layout
 					</span>
 
 <nav>
   <ul class="layoutul">
     <li class="widthli">
-    	<a href="#"><img src="images/icon_width.png"/>Width ratio</a>
+    	<a href="#"><img class="iconDrop" src="images/icon_width.png"/>Width ratio</a>
 
 <ul class="fallback dropdown">
         <li><a href="#" id="fiftyFifty"/>50% / 50% </a>
@@ -89,9 +100,9 @@ Layout
     </li>
     	
     <li>
-      <a class="columnsli" href="#"><img src="images/icon_columns.png"/>Columns</a>
+      <a class="columnsli" href="#"><img class="iconDrop"src="images/icon_columns.png"/>Columns</a>
       <ul class="fallback dropdown">
-        <li><a id="twoColumns" href="#">Two columns</a></li>        
+        <li><a id="twoColumns" href="#">Two columns</a></li>
         <li><a id="threeColumns" href="#">Three columns</a></li>
         <li><a id="fourColumns" href="#">Four columns</a></li>
         <li><a id="fiveColumns" href="#">Five columns</a></li>
@@ -105,11 +116,33 @@ Layout
 
 				</div>
 <div class="visual">
-				<span class="layoutdesc">Visual</span>
 
-			
-			 
-			</div>
+<nav>
+  <ul class="layoutul">
+    <li class="widthli">
+    	<a class="visualdesc" href="#">Visual</a>
+
+	<ul class="fallback dropdown">
+        <li><input id="cleangui" type="checkbox" checked="checked"></li>
+        <li><a href="#" id="twentyfiveSeventyfive">25% /  75%</a></li>
+        <li><a href="#" id="seventyfiveTwentyfive">75% / 25%</a></li>
+     </ul>
+    </li>
+</nav>
+	
+<!-- <nav>
+      <a class="columnsli" href="#"><span class="layoutdesc">Visual
+				</span></a>
+      <ul class="fallback dropdown">
+        <li><a id="twoColumns" href="#">Two columns</a></li>
+        <li><a id="threeColumns" href="#">Three columns</a></li>
+        <li><a id="fourColumns" href="#">Four columns</a></li>
+        <li><a id="fiveColumns" href="#">Five columns</a></li>
+        <li><a id="sixColumns" href="#">Six columns</a></li>
+      </ul>
+    
+		</nav>	 --> 
+</div>
 
 
 
@@ -132,7 +165,7 @@ Layout
 			<section id="orientalcountry" class="division">
 				<div class="countrylist">
 					<a href="#" id="imperialClick"><img class="countrylistLoop" src="images/countrylist_loop.svg"/></a>
-					<form style="display: inline;">
+					<form class="countryBox">
 					  <select class="changeOrientalCountry">
 					    <option value="Afghanistan">Afghanistan</option>
 					    <option value="China">China</option>

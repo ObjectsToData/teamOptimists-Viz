@@ -75,9 +75,19 @@ body {
 
 /* WEBSITE */
 .websiteContent {
-	background: #eee;
+	background: #111111;
 	height: 0px;
 	overflow: hidden;
+	background-image: url('../images/bg2.gif');
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.ladiela {
+	height: 500px;
+background-image: url('../images/overlay_bg2.png');
+background-repeat: repeat;
 }
 
 /* FILTERBAR */
@@ -129,18 +139,20 @@ body {
 	border-top: none;
 	border-bottom: none;
 	border-left: 1px solid #1a1a1a;
-	border-right: 1px solid #1a1a1a;
+	border-right: none;
 	line-height: 52px;
 	font-family: brandonbold;
 	font-size: 16px;
 	background: none;
 	color: #696969;
-	margin-left: -7px;
+}
+.exceptionButton {
+	border-right: 1px solid #1a1a1a;	
 }
 .sortdesc {
 	line-height: 52px;
 	margin-left: 20px;
-	margin-right: 38px;
+	margin-right: 20px;
 	text-transform: uppercase;
 	font-family: brandonreg;
 	color: #eee;
@@ -148,11 +160,22 @@ body {
 .layoutdesc {
 	line-height: 52px;
 	margin-left: 20px;
-	margin-right: 38px;
+	margin-right: 20px;
 	text-transform: uppercase;
 	font-family: brandonreg;
 	color: #eee;	
 	float: left;
+}
+.visualdesc {
+	line-height: 52px;
+	margin-left: 20px;
+	margin-right: 20px;
+	text-transform: uppercase;
+	font-family: brandonreg;
+	color: #eee;	
+}
+.iconDrop {
+	margin-right: 11px;
 }
 nav {float:left;}
 nav ul {text-align:center;}
@@ -326,6 +349,11 @@ ul li {
 	.fluid:hover {
 		opacity: 0.4;
 	}
+.countryBox {
+	display: inline-block;
+	margin-left: 10px;
+	margin-top: 15px;
+}	
 .countrylist {
 	background-image:url('../images/countrylist_shadow.png');
 	background-repeat: no-repeat;
@@ -341,7 +369,6 @@ ul li {
 	transition: background-image .5s linear;
 }
 .countrylistLoop {
-	margin-top: 15px;
 	margin-left: 15px;
 }
 .imagetag {
@@ -787,31 +814,36 @@ ul li {
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
-
+            font-family: brandonbold;
+            text-transform: uppercase;
             padding-right: 15px;
         }
 
         .sod_select .sod_prefix { /* Use this if you're using a prefix and want to style it */ }
-        .sod_select .sod_placeholder { /* Use this if you're using a placeholder and want to style it */ }
+        .sod_select .sod_placeholder { 
+        	font-family: brandonbold;
+        	text-transform: uppercase;
+         }
 
 
 
     /* Options list wrapper */
     .sod_select .sod_list_wrapper
         {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            display: none;
-            height: auto;
-            width: 200px;
-            margin: 0 0 0 -3px;
-            background: #ffffff;
-            border: 3px solid #000000;
-            border-top: none;
-            color: #444444;
-            font-weight: 300;
-            z-index: 1;
+        	font-family: brandonreg;
+        	text-transform: uppercase;
+        	position: absolute;
+			top: 100%;
+			left: 0;
+			display: none;
+			height: auto;
+			width: 150px;
+			margin: -2 0 0 -1px;
+			background: #ffffff;
+			border: 1px solid #000000;
+			border-top: none;
+			color: #444444;
+			z-index: 1;
         }
 
         /* Shows the option list (don't edit) */
@@ -941,7 +973,6 @@ line-height: 1;
 width: 150px;
 padding: 13px 10px;
 background-color: rgba(252,252,252, 0.7);
-
 border: 1px solid #d4d4d4;
 box-shadow: inset 0 -1px 2px rgba(0,0,0,.05);
 border-radius: 3px;

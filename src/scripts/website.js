@@ -20,7 +20,13 @@ $( document ).ready(function() {
         $(".mainNav").css( "opacity", "0" );
         $(".mainNav").css( "transition", "opacity .25s ease-in-out;" );
 
-      $('.websiteContent').delay(900).animate({height:'500px'}, 500);
+        
+          setTimeout( function(){
+        
+        $(".filtercontrol").css( "background-color", "#111111" );
+        $(".filtercontrol").css( "transition", "background-color .25s linear;" );},800);
+
+      $('.websiteContent').delay(1100).animate({height:'500px'}, 500);
 
         console.log("5050run");
     });
