@@ -89,7 +89,29 @@ body {
 background-image: url('../images/overlay_bg2.png');
 background-repeat: repeat;
 }
-
+.yellowTag {
+	background: #111111;
+	padding: 5px 9px;
+	display: inline-block;
+	font-family: brandonbold;
+	text-transform: uppercase;
+	color: white;
+	border-radius: 5px;
+	margin-top: 89px;
+}
+.teamList {
+	list-style: none;
+}
+.teamList li {
+	background: #111111;
+	padding: 5px 9px;
+	display: inline-block;
+	font-family: brandonreg;
+	text-transform: uppercase;
+	color: white;
+	border-radius: 5px;
+	margin-top: 10px;
+}
 /* FILTERBAR */
 .filtercontrol {
 	width: 100%;
@@ -124,6 +146,11 @@ background-repeat: repeat;
 	display: -ms-flexbox;      /* TWEENER - IE 10 */
 	display: -webkit-flex;     /* NEW - Chrome */
 	display: flex; 
+}
+.section {
+	border-left: 1px solid #1a1a1a;
+	border-right: 1px solid #1a1a1a;
+
 }
 .sorticon {
 	margin-left: 8px;

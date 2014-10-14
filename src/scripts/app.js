@@ -56,11 +56,10 @@ function importDataAndCreateCountry(country) {
 }
 
 // function to create any and all countries
-
 function createCountry(data, country) {
   var imgTags = "";
   $(data.docs).each(function(){
-    imgTags += "<div class=\"nytPhoto nytTooltip\" title=\"&lt;span class=&quot;nytTimestamp&quot;&gt;" +this.pub_date + "&lt;/span&gt; &lt;h5 class=&quot;nytHeading&quot;&gt;" +this.headline.main + "&lt;/h5&gt; &lt;p class=&quot;nytSnippet&quot;&gt;" +this.snippet + " &lt;span class=&quot;nytWordcount&quot;&gt;[" +this.word_count + " words]&lt;/span&gt;&lt;/p&gt;\"><a href=\"" +this.web_url + "\" target=\"_blank\"><img class=\"fluid\" src=\"images/" +this.multimedia[1].url + "\"/></a><span class=\"saturation\">" + this.enrichment.saturation + "</span><span class=\"brightness\">" + this.enrichment.brightness + "</span><span class=\"hue\">" + this.enrichment.hue + "</span><span class=\"shapes\">" + this.enrichment.shapes + "</span><span class=\"articlelength\">" +this.word_count + "</span></div>";
+    imgTags += "<div class=\"nytPhoto " + this.section_name + " nytTooltip\" title=\"&lt;span class=&quot;nytTimestamp&quot;&gt;" +this.pub_date + "&lt;/span&gt; &lt;h5 class=&quot;nytHeading&quot;&gt;" +this.headline.main + "&lt;/h5&gt; &lt;p class=&quot;nytSnippet&quot;&gt;" +this.snippet + " &lt;span class=&quot;nytWordcount&quot;&gt;[" +this.word_count + " words]&lt;/span&gt;&lt;/p&gt;\"><a href=\"" +this.web_url + "\" target=\"_blank\"><img class=\"fluid\" src=\"images/" +this.multimedia[1].url + "\"/></a><span class=\"saturation\">" + this.enrichment.saturation + "</span><span class=\"brightness\">" + this.enrichment.brightness + "</span><span class=\"hue\">" + this.enrichment.hue + "</span><span class=\"shapes\">" + this.enrichment.shapes + "</span><span class=\"articlelength\">" +this.word_count + "</span></div>";
   });
   var imgTagsHTML = $.parseHTML(imgTags);
 
@@ -92,6 +91,37 @@ function changeCountry() {
 }
 
 // FILTERBAR 
+// FILTER
+// filter functions
+  var filterFns = {
+    // show if number is greater than 50
+    numberGreaterThan50: function() {
+      var number = $(this).find('.number').text();
+      return parseInt( number, 10 ) > 50;
+    },
+    // show if name ends with -ium
+    ium: function() {
+      var name = $(this).find('.name').text();
+      return name.match( /ium$/ );
+    }
+  };
+
+  $('#filters').on( 'change', function() {
+    // get filter value from option value
+    var filterValue = this.value;
+    // use filterFn if matches value
+    filterValue = filterFns[ filterValue ] || filterValue;
+    $containerImperial.isotope({ filter: filterValue });
+  });
+
+  $('#filters').on( 'change', function() {
+    // get filter value from option value
+    var filterValue = this.value;
+    // use filterFn if matches value
+    filterValue = filterFns[ filterValue ] || filterValue;
+    $containerOriental.isotope({ filter: filterValue });
+  });
+
 // SORTING
 // Sorting functionality
 $('#sorts').on( 'click', 'button', function() {
