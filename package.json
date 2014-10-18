@@ -14,6 +14,7 @@
     "grunt-contrib-copy": "^0.5.0",
     "grunt-contrib-imagemin": "^0.8.1",
     "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-sass": "^0.8.1",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-express-server": "^0.4.17",
     "grunt-gh-pages": "^0.9.1",

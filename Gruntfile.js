@@ -49,6 +49,13 @@ module.exports = function(grunt) {
         dest: 'dist/styles'
       }  
     },
+    sass: {
+      dist: {
+        files: {
+          'src/styles/main.css' : 'src/styles/main.scss'
+        }
+      }
+    },
     bowercopy: {
       isotope: {
         src: 'isotope/dist/isotope.pkgd.min.js',
@@ -105,8 +112,8 @@ module.exports = function(grunt) {
         tasks: ['copy:html']  
       },
       css: {
-        files: ['src/**/*.css'],
-        tasks: ['copy:styles']  
+        files: ['src/**/*.scss'],
+        tasks: ["copy:styles", "sass"]  
       },
       scripts: {
         files: ['src/scripts/**/*.js'],
@@ -119,10 +126,11 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('build', ['clean:build', 'copy', 'bowercopy', 'imagemin']);
-  grunt.registerTask('default', ['build', 'express', 'watch']);
+  grunt.registerTask('default', ['build', 'sass', 'express', 'watch']);
   grunt.registerTask('deploy', ['build', 'gh-pages']);
 
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-bowercopy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');

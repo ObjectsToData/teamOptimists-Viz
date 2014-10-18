@@ -6,6 +6,7 @@ $('.nytTooltip').tooltipster({
     position: 'right',
 });
 }
+
 // Init isotopes
 var $containerImperial = $('#imperialcountry');
 var $containerOriental = $('#orientalcountry');
@@ -94,11 +95,6 @@ function changeCountry() {
 // FILTER
 // filter functions
   var filterFns = {
-    // show if number is greater than 50
-    numberGreaterThan50: function() {
-      var number = $(this).find('.number').text();
-      return parseInt( number, 10 ) > 50;
-    },
     // show if name ends with -ium
     ium: function() {
       var name = $(this).find('.name').text();
@@ -176,33 +172,11 @@ $("#seventyfiveTwentyfive").click(function() {
 });
 
 // COLUMNS
-// Two columns
-$("#twoColumns").click(function() {
-    $(".nytPhoto").css( "width", "50%" );
-    isotopeReinit();    
-});
-// Three columns
-$("#threeColumns").click(function() {
-    $(".nytPhoto").css( "width", "33.3%" );
-    isotopeReinit();    
-});
-
-// Four columns
-$("#fourColumns").click(function() {
-    $(".nytPhoto").css( "width", "25%" );
-    isotopeReinit();    
-});
-
-// Five columns
-$("#fiveColumns").click(function() {
-    $(".nytPhoto").css( "width", "20%" );
-    isotopeReinit();    
-});
-
-// Six columns
-$("#sixColumns").click(function() {
-    $(".nytPhoto").css( "width", "16.6%" );
-    isotopeReinit();    
+$(".columnWidthChanger").click(function(event) {
+	event.preventDefault();
+	var columnPercentage = $(this).data('column');
+	$(".nytPhoto").css('width', columnPercentage);
+	isotopeReinit();
 });
 
 // VISUAL

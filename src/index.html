@@ -47,7 +47,6 @@
 				<ul>
 					<li><a class="menuclick" href="#">About</a></li>
 					<li><a href="#" id="shuffle-button">Team</a></li>
-					<li>Share</li>
 				</ul>
 			</nav>
 
@@ -64,8 +63,8 @@
 					    <option value=".Automobiles">Automobiles</option>
 					    <option value=".Books">Books</option>
 					    <option value=".Business Day">Business Day</option>
-					     <option value=".Crosswords & Games">Crosswords & Games</option>
-					      <option value=".Dining & Wine">Dining & Wine</option>
+					    <option value=".Crosswords & Games">Crosswords & Games</option>
+					    <option value=".Dining & Wine">Dining & Wine</option>
 					    <option value=".Education">Eduction</option>
 					    <option value=".Fashion & Style">Fashion & Style</option>
 					  	<option value=".Health">Health</option>
@@ -75,6 +74,7 @@
 					  	<option value=".Multimedia/Photos">Multimedia/Photos</option>
 					    <option value=".N.Y. / Region">N.Y. / Region</option>
 					    <option value=".Opinion">Opinion</option>
+					    <option value=":not(.Opinion)">Remove Opinion</option>
 					    <option value=".Science">Science</option>
 					    <option value=".Sports">Sports</option>
 					    <option value=".Style">Style</option>
@@ -100,7 +100,7 @@
 			  <button class="sortbutton is-checked tooltip exceptionButton" title="Original order" data-sort-value="original-order">
 			  		<img class="sorticon icon-original" src="images/icon_original.png"/>
 			  </button>
-			  <a class="shuffle-button" class="sortbutton tooltip" title="Shuffle">
+			  <a class="shuffle-button tooltip" class="sortbutton tooltip" title="Shuffle">
 					<img class="sorticon icon-shuffle" src="images/icon_shuffle.png"/>
 			  </a>
 			  <button class="sortbutton tooltip" title="Sort by brightness" data-sort-value="brightness">
@@ -140,11 +140,11 @@ Layout
     <li>
       <a class="columnsli" href="#"><img class="iconDrop"src="images/icon_columns.png"/>Columns</a>
       <ul class="fallback dropdown">
-        <li><a id="twoColumns" href="#">Two columns</a></li>
-        <li><a id="threeColumns" href="#">Three columns</a></li>
-        <li><a id="fourColumns" href="#">Four columns</a></li>
-        <li><a id="fiveColumns" href="#">Five columns</a></li>
-        <li><a id="sixColumns" href="#">Six columns</a></li>
+      	<li><a class="columnWidthChanger" data-column='50%' href="#">Two columns</a></li>
+      	<li><a class="columnWidthChanger" data-column='33.3%' href="#">Three columns</a></li>
+      	<li><a class="columnWidthChanger" data-column='25%' href="#">Four columns</a></li>
+      	<li><a class="columnWidthChanger" data-column='20%' href="#">Five columns</a></li>
+      	<li><a class="columnWidthChanger" data-column='16.6%' href="#">Six columns</a></li>
       </ul>
     </li>
   </ul>
@@ -162,33 +162,19 @@ Layout
 
 	<ul class="fallback dropdown">
         <li><input id="cleangui" type="checkbox" checked="checked"></li>
-        <li><a href="#" id="twentyfiveSeventyfive">25% /  75%</a></li>
-        <li><a href="#" id="seventyfiveTwentyfive">75% / 25%</a></li>
+        <li><a href="#" id="makeGray">Grayscale</a></li>
+        <li><a href="#" id="makeColor">Colours</a></li>
      </ul>
     </li>
 </nav>
 	
-<!-- <nav>
-      <a class="columnsli" href="#"><span class="layoutdesc">Visual
-				</span></a>
-      <ul class="fallback dropdown">
-        <li><a id="twoColumns" href="#">Two columns</a></li>
-        <li><a id="threeColumns" href="#">Three columns</a></li>
-        <li><a id="fourColumns" href="#">Four columns</a></li>
-        <li><a id="fiveColumns" href="#">Five columns</a></li>
-        <li><a id="sixColumns" href="#">Six columns</a></li>
-      </ul>
-    
-		</nav>	 --> 
+ 
 </div>
 
 
 
 			</div>
 		</section>
-
-		<!-- Dit moet nog goed opgelost worden -->
-		
 
 		<!-- START ISOTOPES -->
 		<main id="container">
@@ -225,12 +211,14 @@ Layout
 			</section>
 		</main>
 
+
 		<script src="/vendor/jquery.min.js"></script>
 		<script src="/vendor/isotope.pkgd.min.js"></script>
 		<script src="/vendor/imagesloaded.pkgd.min.js"></script>
 		<script src="/vendor/jquery-ui.min.js"></script>
 		<script src="/scripts/app.js"></script>
 		<script src="/scripts/website.js"></script>
+
 
 	</body>
 </html>
