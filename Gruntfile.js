@@ -8,7 +8,7 @@ module.exports = function(grunt) {
     copy: {
       config: {
         expand: true,
-        cwd: 'src',
+        cwd: '.',
         src: 'CNAME',
         dest: 'dist/'
       },
@@ -128,6 +128,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['clean:build', 'copy', 'bowercopy', 'imagemin']);
   grunt.registerTask('default', ['build', 'sass', 'express', 'watch']);
   grunt.registerTask('deploy', ['build', 'gh-pages']);
+  grunt.registerTask('quick', ['express', 'watch']);
 
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-sass');

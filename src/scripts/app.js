@@ -58,6 +58,12 @@ function importDataAndCreateCountry(country) {
 
 // function to create any and all countries
 function createCountry(data, country) {
+	if (country == "United+States"){
+    $containerImperial.css("visibility", "hidden");
+  } else {
+    $containerOriental.css("visibility", "hidden");
+  }
+
   var imgTags = "";
   $(data.docs).each(function(){
     imgTags += "<div class=\"nytPhoto " + this.section_name + " nytTooltip\" title=\"&lt;span class=&quot;nytTimestamp&quot;&gt;" +this.pub_date + "&lt;/span&gt; &lt;h5 class=&quot;nytHeading&quot;&gt;" +this.headline.main + "&lt;/h5&gt; &lt;p class=&quot;nytSnippet&quot;&gt;" +this.snippet + " &lt;span class=&quot;nytWordcount&quot;&gt;[" +this.word_count + " words]&lt;/span&gt;&lt;/p&gt;\"><a href=\"" +this.web_url + "\" target=\"_blank\"><img class=\"fluid\" src=\"images/" +this.multimedia[1].url + "\"/></a><span class=\"saturation\">" + this.enrichment.saturation + "</span><span class=\"brightness\">" + this.enrichment.brightness + "</span><span class=\"hue\">" + this.enrichment.hue + "</span><span class=\"shapes\">" + this.enrichment.shapes + "</span><span class=\"articlelength\">" +this.word_count + "</span></div>";
@@ -68,13 +74,15 @@ function createCountry(data, country) {
   if (country == "United+States"){
     $containerImperial.append(imgTagsHTML).imagesLoaded( function(){
       $containerImperial.isotope("appended", imgTagsHTML).isotope('layout');
+    	$containerImperial.css("visibility", "visible");
     });
   } else {
     $containerOriental.append(imgTagsHTML).imagesLoaded( function(){
       $containerOriental.isotope("appended", imgTagsHTML).isotope('layout');
+    	$containerOriental.css("visibility", "visible");
     });
   }
-    tooltipNyt();
+  tooltipNyt();
 }
 
 function changeCountry() {

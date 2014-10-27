@@ -1,8 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -12,741 +7,288 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+  display: block; }
+
 body {
-	line-height: 1;
-}
+  line-height: 1; }
+
 ol, ul {
-	list-style: none;
-}
+  list-style: none; }
+
 blockquote, q {
-	quotes: none;
-}
+  quotes: none; }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
-}
+  content: '';
+  content: none; }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
-
-/* TEAM OPTIMISTS CUSTOM CODE */
-body {
-	background: black;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-
-/* HEADER PART */
-.logo {
-	margin-left: 29px;
-	margin-top: 24px;
-	margin-bottom: 14px;
-	height: 22px;
-	opacity: 1.0;
-	transition: opacity .25s ease-in-out;
-}
-.mainNav {
-	float: right;
-	opacity: 1.0;
-	transition: opacity .25s ease-in-out;
-}
-
-/* WEBSITE */
-.websiteContent {
-	background: #111111;
-	height: 0px;
-	overflow: hidden;
-	background-image: url('../images/bg2.gif');
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 0 0;
-}
-.ladiela {
-	height: 500px;
-background-image: url('../images/overlay_bg2.png');
-background-repeat: repeat;
-}
-.yellowTag {
-	background: #111111;
-	padding: 5px 9px;
-	display: inline-block;
-	font-family: brandonbold;
-	text-transform: uppercase;
-	color: white;
-	border-radius: 5px;
-	margin-top: 89px;
-}
-.teamList {
-	list-style: none;
-}
-.teamList li {
-	background: #111111;
-	padding: 5px 9px;
-	display: inline-block;
-	font-family: brandonreg;
-	text-transform: uppercase;
-	color: white;
-	border-radius: 5px;
-	margin-top: 10px;
-}
-/* FILTERBAR */
-.filtercontrol {
-	width: 100%;
-	height: 112px;
-	background: #eeeeee;
-	z-index: 105;
-	display: absolute;
-}
-	/* CUSTOM FONTS */
-	@font-face {
-    font-family: brandonreg;
-    src: url(../fonts/brandonreg.woff);
-	}
-	@font-face {
-    font-family: brandonreg;
-    src: url(../fonts/brandonreg.eot);
-	}
-	@font-face {
-    font-family: brandonbold;
-    src: url(../fonts/brandonbold.woff);
-	}
-	@font-face {
-    font-family: brandonbold;
-    src: url(../fonts/brandonbold.eot);
-	}
-.sortbar {
-	width: 100%;
-	height: 52px;
-	background-color: #111111;
-	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-	display: -ms-flexbox;      /* TWEENER - IE 10 */
-	display: -webkit-flex;     /* NEW - Chrome */
-	display: flex; 
-}
-.section {
-	border-left: 1px solid #1a1a1a;
-	border-right: 1px solid #1a1a1a;
-
-}
-.sorticon {
-	margin-left: 8px;
-	margin-right: 8px;
-	padding-top: 2px;
-}
-.icon-hue, .icon-saturation {
-	margin-left: 8px;
-	margin-right: 8px;
-}
-.sortbutton {
-	height: 52px;
-	border-top: none;
-	border-bottom: none;
-	border-left: 1px solid #1a1a1a;
-	border-right: none;
-	line-height: 52px;
-	font-family: brandonbold;
-	font-size: 16px;
-	background: none;
-	color: #696969;
-}
-.exceptionButton {
-	border-right: 1px solid #1a1a1a;	
-}
-.sortdesc {
-	line-height: 52px;
-	margin-left: 20px;
-	margin-right: 20px;
-	text-transform: uppercase;
-	font-family: brandonreg;
-	color: #eee;
-}
-.layoutdesc {
-	line-height: 52px;
-	margin-left: 20px;
-	margin-right: 20px;
-	text-transform: uppercase;
-	font-family: brandonreg;
-	color: #eee;	
-	float: left;
-}
-.visualdesc {
-	line-height: 52px;
-	margin-left: 20px;
-	margin-right: 20px;
-	text-transform: uppercase;
-	font-family: brandonreg;
-	color: #eee;	
-}
-.iconDrop {
-	margin-right: 11px;
-}
-nav {float:left;}
-nav ul {text-align:center;}
-nav ul li {float:left;display:inline;}
-nav ul li:hover {background:#E6E6E6;}
-nav ul li a {
-	display:block;
-	line-height: 52px;
-	padding-left: 8px;
-	padding-right: 8px;
-	color:#444;
-}
-nav ul li ul {position:absolute;width:110px;background:#FFF;}
-nav ul li ul li {width:110px;}
-nav ul li ul li a {display:block;padding:15px 10px;color:#444;}
-nav ul li ul li:hover a {background:#F7F7F7;}
-nav ul li ul.fallback {display:none;}
-nav ul li:hover ul.fallback {display:block;}
-.dropdown { z-index: 200;}
-.layoutul {
-	display: inline-block;
-
-}
-ul li {
-	display: inline;
-}
-.layoutul:last-child {
-	border-right: 1px solid #1a1a1a;
-}
-.widthli, .columnsli {
-	padding-left: 5px;
-	padding-right: 5px;
-	display: inherit;
-	z-index: 120;
-	border-left: 1px solid #1a1a1a;
-	line-height: 52px;
-	font-family: brandonbold;	
-	text-decoration: none;
-}
-.filterdesc {
-	line-height: 60px;
-	margin-left: 20px;
-	margin-right: 20px;
-	text-transform: uppercase;
-	font-family: brandonreg;
-}
-.filterbutton {
-	height: 60px;
-	border-top: none;
-	border-bottom: none;
-	border-left: 1px solid #ACACAC;
-	border-right: 1px solid #ACACAC;
-	line-height: 60px;
-	background-color:#eeeeee;
-	font-family: brandonbold;
-	font-size: 16px;
-	color: #696969;
-	margin-left: -7px;
-}
-	.filterbutton:focus {
-		outline: 0;
-		background: #f5f5f5;
-	}
-/*	.filterbutxxton:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
-	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
-	background-color:#dfdfdf;
-	}
-	.filterbuxxton:active {
-		position:relative;
-		top:1px;
-	}*/
-	.icon-desc {
-		text-transform: uppercase;
-		padding-left: 65px;
-		padding-right: 15px;
-	}
-	.icon-eye {
-		margin-left: 5px;
-		margin-top: 15px;
-		display: block;
-		position: absolute;
-	}
-	.icon-burqa {
-		margin-left: -7px;
-		margin-top: 15px;
-		display: block;
-		position: absolute;
-	}
-	.icon-violence {
-		margin-left: 5px;
-		margin-top: 15px;
-		display: block;
-		position: absolute;
-	}
-/* FILTERBAR: FILTERING */
-.grayscale { 
-	-webkit-filter: grayscale(100%) !important;
-	-moz-filter: grayscale(100%);
-	-ms-filter: grayscale(100%);
-	-o-filter: grayscale(100%);
-	filter: grayscale(100%);
-	filter: gray; /* IE 6-9 */
-	transition: filter 1s ease-in-out;
-	-webkit-transition: filter 1s ease-in-out;
-}
-
-/* FILTERBAR: SORTING */
-.saturation, .hue, .brightness, .shapes, .articlelength {
-	display: none;
-}
-
-/* ISOTOPES */
-#container {
-	background: #000;
-	height: 100%;
-	min-height: 300px;
-}
-	/* new clearfix */
-	.clearfix:after {
-		visibility: hidden;
-		display: block;
-		font-size: 0;
-		content: " ";
-		clear: both;
-		height: 0;
-	}
-.division {
-	width: 50%;
-	background: black;
-	float: left;
-}
-#imperialcountry {
-	padding-bottom: 500px; /* BETERE OPLOSSING ZOEKEN*/
-    margin-bottom: -500px;
-}
-#orientalcountry {
-	width: 50%;
-	float: left;
-	background: black !important;
-	padding-bottom: 500px;
-    margin-bottom: -500px;
-}
-#orientalcountry:after {
-	content:'.';
-	clear: both;
-	display: block;
-	height: 0px;
-	text-indent: -999999em;
-}
-.nytPhoto {
-	width: 33.3%;
-}
-.groter {
-	width: 66.6%;
-}
-.fluid {
-	width: 100%;
-	opacity: 1.0;
-}
-	.orientaltag {
-		opacity: 1.0;
-	}
-	.gone {
-		opacity: 0;
-		 transition: opacity .25s ease-in-out;
-   -moz-transition: opacity .25s ease-in-out;
-   -webkit-transition: opacity .25s ease-in-out;
-	}
-	.fluid:hover {
-		opacity: 0.4;
-	}
-.countryBox {
-	display: inline-block;
-	margin-left: 10px;
-	margin-top: 15px;
-}	
-.countrylist {
-	background-image:url('../images/countrylist_shadow.png');
-	background-repeat: no-repeat;
-	width: 220px;
-	height: 113px;
-	position: absolute;
-	z-index: 70;
-	transition: background-image .5s linear;
-}
-.countrylist:hover {
-	background-image:url('../images/countrylist_shadowhover.png');
-	background-repeat: no-repeat;
-	transition: background-image .5s linear;
-}
-.countrylistLoop {
-	margin-left: 15px;
-}
-.imagetag {
-	padding-top: 5px;
-	height: 70px;
-	display: block;
-	position: fixed;
-	margin-top: 100px;
-	z-index: 60;
-	pointer-events:none;
-}
-/*.floatright {
-	margin-left: 50%;
-}*/
-.shadowgradiant {
-	background-image: url('../images/gradiant.png');
-	background-repeat: repeat-y;
-	width: 65px;
-	height: 100%;
-	z-index: 5;
-	position: absolute;
-	opacity: 1.0;
-	pointer-events:none;
-   -webkit-transition: opacity .25s ease-in-out;
-}
-	#orientalcountry:hover > .shadowgradiant {
-		opacity: 0.8;
-		transition: opacity .25s ease-in-out;
-		-moz-transition: opacity .25s ease-in-out;
-		-webkit-transition: opacity .25s ease-in-out;
-	}
-	#imperialcountry:hover > .shadowgradiant {
-		opacity: 0.8;
-		transition: opacity .25s ease-in-out;
-		-moz-transition: opacity .25s ease-in-out;
-		-webkit-transition: opacity .25s ease-in-out;
-	}
-
-/* SLIDER */
-.ui-resizable-e {
-	cursor: url('../images/slidercursor.svg') 30 0, auto !important; 
-	width: 33px !important;
-	top: 0;
-	right: 0px !important;
-	height: 100%;
-	transition: background-image 1s linear;
-	background-image:url('../images/transparent.png');
-}
-.ui-resizable-e:hover {
-	background-image: url('../images/sliderhighlight.png');
-	background-repeat: repeat-y;
-	background-position: right;
-	transition: background-image 1s linear;
-}
-
-
-/* CONTENT NYTTOOLTIP */
-.nytTimestamp {
-	margin-top: 5px;
-}
-.nytHeading {
-	margin-top: 15px;
-	font-family: Georgia;
-	font-size: 18px;
-	color: white;
-	text-transform: none;
-}
-.nytSnippet {
-	margin-top: 10px;
-	text-transform: none;
-	font-size: 14px;
-}
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 /* TOOLTIPSTER */
 /* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
 .tooltipster-default {
-	border-radius: 5px; 
-	background: #111111;
-	color: #6f6f6f;
-	text-transform: uppercase;
-	max-width: 300px;
-}
+  border-radius: 5px;
+  background: #111111;
+  color: #6f6f6f;
+  text-transform: uppercase;
+  max-width: 300px; }
 
 /* Use this next selector to style things like font-size and line-height: */
 .tooltipster-default .tooltipster-content {
-	font-family: brandonreg;
-	text-transform: uppercase;
-	font-size: 14px;
-	line-height: 16px;
-	padding: 12px 14px;
-	overflow: hidden;
-}
+  font-family: brandonreg;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 12px 14px;
+  overflow: hidden; }
 
 /* This next selector defines the color of the border on the outside of the arrow. This will automatically match the color and size of the border set on the main tooltip styles. Set display: none; if you would like a border around the tooltip but no border around the arrow */
 .tooltipster-default .tooltipster-arrow .tooltipster-arrow-border {
-	/* border-color: ... !important; */
-}
-
+  /* border-color: ... !important; */ }
 
 /* If you're using the icon option, use this next selector to style them */
 .tooltipster-icon {
-	cursor: help;
-	margin-left: 4px;
-}
-
-
-
-
-
-
-
+  cursor: help;
+  margin-left: 4px; }
 
 /* This is the base styling required to make all Tooltipsters work */
 .tooltipster-base {
-	padding: 0;
-	font-size: 0;
-	line-height: 0;
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: 9999999;
-	pointer-events: none;
-	width: auto;
-	overflow: visible;
-}
-.tooltipster-base .tooltipster-content {
-	overflow: hidden;
-}
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9999999;
+  pointer-events: none;
+  width: auto;
+  overflow: visible; }
 
+.tooltipster-base .tooltipster-content {
+  overflow: hidden; }
 
 /* These next classes handle the styles for the little arrow attached to the tooltip. By default, the arrow will inherit the same colors and border as what is set on the main tooltip itself. */
 .tooltipster-arrow {
-	display: block;
-	text-align: center;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
-}
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; }
+
 .tooltipster-arrow span, .tooltipster-arrow-border {
-	display: block;
-	width: 0; 
-	height: 0;
-	position: absolute;
-}
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute; }
+
 .tooltipster-arrow-top span, .tooltipster-arrow-top-right span, .tooltipster-arrow-top-left span {
-	border-left: 8px solid transparent !important;
-	border-right: 8px solid transparent !important;
-	border-top: 8px solid;
-	bottom: -7px;
-}
+  border-left: 8px solid transparent !important;
+  border-right: 8px solid transparent !important;
+  border-top: 8px solid;
+  bottom: -7px; }
+
 .tooltipster-arrow-top .tooltipster-arrow-border, .tooltipster-arrow-top-right .tooltipster-arrow-border, .tooltipster-arrow-top-left .tooltipster-arrow-border {
-	border-left: 9px solid transparent !important;
-	border-right: 9px solid transparent !important;
-	border-top: 9px solid;
-	bottom: -7px;
-}
+  border-left: 9px solid transparent !important;
+  border-right: 9px solid transparent !important;
+  border-top: 9px solid;
+  bottom: -7px; }
 
 .tooltipster-arrow-bottom span, .tooltipster-arrow-bottom-right span, .tooltipster-arrow-bottom-left span {
-	border-left: 8px solid transparent !important;
-	border-right: 8px solid transparent !important;
-	border-bottom: 8px solid;
-	top: -7px;
-}
-.tooltipster-arrow-bottom .tooltipster-arrow-border, .tooltipster-arrow-bottom-right .tooltipster-arrow-border, .tooltipster-arrow-bottom-left .tooltipster-arrow-border {
-	border-left: 9px solid transparent !important;
-	border-right: 9px solid transparent !important;
-	border-bottom: 9px solid;
-	top: -7px;
-}
-.tooltipster-arrow-top span, .tooltipster-arrow-top .tooltipster-arrow-border, .tooltipster-arrow-bottom span, .tooltipster-arrow-bottom .tooltipster-arrow-border {
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-}
-.tooltipster-arrow-top-left span, .tooltipster-arrow-bottom-left span {
-	left: 6px;
-}
-.tooltipster-arrow-top-left .tooltipster-arrow-border, .tooltipster-arrow-bottom-left .tooltipster-arrow-border {
-	left: 5px;
-}
-.tooltipster-arrow-top-right span,  .tooltipster-arrow-bottom-right span {
-	right: 6px;
-}
-.tooltipster-arrow-top-right .tooltipster-arrow-border, .tooltipster-arrow-bottom-right .tooltipster-arrow-border {
-	right: 5px;
-}
-.tooltipster-arrow-left span, .tooltipster-arrow-left .tooltipster-arrow-border {
-	border-top: 8px solid transparent !important;
-	border-bottom: 8px solid transparent !important; 
-	border-left: 8px solid;
-	top: 50%;
-	margin-top: -7px;
-	right: -7px;
-}
-.tooltipster-arrow-left .tooltipster-arrow-border {
-	border-top: 9px solid transparent !important;
-	border-bottom: 9px solid transparent !important; 
-	border-left: 9px solid;
-	margin-top: -8px;
-}
-.tooltipster-arrow-right span, .tooltipster-arrow-right .tooltipster-arrow-border {
-	border-top: 8px solid transparent !important;
-	border-bottom: 8px solid transparent !important; 
-	border-right: 8px solid;
-	top: 50%;
-	margin-top: -7px;
-	left: -7px;
-}
-.tooltipster-arrow-right .tooltipster-arrow-border {
-	border-top: 9px solid transparent !important;
-	border-bottom: 9px solid transparent !important; 
-	border-right: 9px solid;
-	margin-top: -8px;
-}
+  border-left: 8px solid transparent !important;
+  border-right: 8px solid transparent !important;
+  border-bottom: 8px solid;
+  top: -7px; }
 
+.tooltipster-arrow-bottom .tooltipster-arrow-border, .tooltipster-arrow-bottom-right .tooltipster-arrow-border, .tooltipster-arrow-bottom-left .tooltipster-arrow-border {
+  border-left: 9px solid transparent !important;
+  border-right: 9px solid transparent !important;
+  border-bottom: 9px solid;
+  top: -7px; }
+
+.tooltipster-arrow-top span, .tooltipster-arrow-top .tooltipster-arrow-border, .tooltipster-arrow-bottom span, .tooltipster-arrow-bottom .tooltipster-arrow-border {
+  left: 0;
+  right: 0;
+  margin: 0 auto; }
+
+.tooltipster-arrow-top-left span, .tooltipster-arrow-bottom-left span {
+  left: 6px; }
+
+.tooltipster-arrow-top-left .tooltipster-arrow-border, .tooltipster-arrow-bottom-left .tooltipster-arrow-border {
+  left: 5px; }
+
+.tooltipster-arrow-top-right span, .tooltipster-arrow-bottom-right span {
+  right: 6px; }
+
+.tooltipster-arrow-top-right .tooltipster-arrow-border, .tooltipster-arrow-bottom-right .tooltipster-arrow-border {
+  right: 5px; }
+
+.tooltipster-arrow-left span, .tooltipster-arrow-left .tooltipster-arrow-border {
+  border-top: 8px solid transparent !important;
+  border-bottom: 8px solid transparent !important;
+  border-left: 8px solid;
+  top: 50%;
+  margin-top: -7px;
+  right: -7px; }
+
+.tooltipster-arrow-left .tooltipster-arrow-border {
+  border-top: 9px solid transparent !important;
+  border-bottom: 9px solid transparent !important;
+  border-left: 9px solid;
+  margin-top: -8px; }
+
+.tooltipster-arrow-right span, .tooltipster-arrow-right .tooltipster-arrow-border {
+  border-top: 8px solid transparent !important;
+  border-bottom: 8px solid transparent !important;
+  border-right: 8px solid;
+  top: 50%;
+  margin-top: -7px;
+  left: -7px; }
+
+.tooltipster-arrow-right .tooltipster-arrow-border {
+  border-top: 9px solid transparent !important;
+  border-bottom: 9px solid transparent !important;
+  border-right: 9px solid;
+  margin-top: -8px; }
 
 /* Some CSS magic for the awesome animations - feel free to make your own custom animations and reference it in your Tooltipster settings! */
-
 .tooltipster-fade {
-	opacity: 0;
-	-webkit-transition-property: opacity;
-	-moz-transition-property: opacity;
-	-o-transition-property: opacity;
-	-ms-transition-property: opacity;
-	transition-property: opacity;
-}
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  -ms-transition-property: opacity;
+  transition-property: opacity; }
+
 .tooltipster-fade-show {
-	opacity: 1;
-}
+  opacity: 1; }
 
 .tooltipster-grow {
-	-webkit-transform: scale(0,0);
-	-moz-transform: scale(0,0);
-	-o-transform: scale(0,0);
-	-ms-transform: scale(0,0);
-	transform: scale(0,0);
-	-webkit-transition-property: -webkit-transform;
-	-moz-transition-property: -moz-transform;
-	-o-transition-property: -o-transform;
-	-ms-transition-property: -ms-transform;
-	transition-property: transform;
-	-webkit-backface-visibility: hidden;
-}
+  -webkit-transform: scale(0, 0);
+  -moz-transform: scale(0, 0);
+  -o-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  transform: scale(0, 0);
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -ms-transition-property: -ms-transform;
+  transition-property: transform;
+  -webkit-backface-visibility: hidden; }
+
 .tooltipster-grow-show {
-	-webkit-transform: scale(1,1);
-	-moz-transform: scale(1,1);
-	-o-transform: scale(1,1);
-	-ms-transform: scale(1,1);
-	transform: scale(1,1);
-	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15); 
-	-moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15); 
-	-ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15); 
-	-o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15); 
-	transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
-}
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  -ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15); }
 
 .tooltipster-swing {
-	opacity: 0;
-	-webkit-transform: rotateZ(4deg);
-	-moz-transform: rotateZ(4deg);
-	-o-transform: rotateZ(4deg);
-	-ms-transform: rotateZ(4deg);
-	transform: rotateZ(4deg);
-	-webkit-transition-property: -webkit-transform, opacity;
-	-moz-transition-property: -moz-transform;
-	-o-transition-property: -o-transform;
-	-ms-transition-property: -ms-transform;
-	transition-property: transform;
-}
+  opacity: 0;
+  -webkit-transform: rotateZ(4deg);
+  -moz-transform: rotateZ(4deg);
+  -o-transform: rotateZ(4deg);
+  -ms-transform: rotateZ(4deg);
+  transform: rotateZ(4deg);
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -ms-transition-property: -ms-transform;
+  transition-property: transform; }
+
 .tooltipster-swing-show {
-	opacity: 1;
-	-webkit-transform: rotateZ(0deg);
-	-moz-transform: rotateZ(0deg);
-	-o-transform: rotateZ(0deg);
-	-ms-transform: rotateZ(0deg);
-	transform: rotateZ(0deg);
-	-webkit-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 1);
-	-webkit-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4); 
-	-moz-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4); 
-	-ms-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4); 
-	-o-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4); 
-	transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4);
-}
+  opacity: 1;
+  -webkit-transform: rotateZ(0deg);
+  -moz-transform: rotateZ(0deg);
+  -o-transform: rotateZ(0deg);
+  -ms-transform: rotateZ(0deg);
+  transform: rotateZ(0deg);
+  -webkit-transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 2.4);
+  -moz-transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 2.4);
+  -ms-transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 2.4);
+  -o-transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 2.4);
+  transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 2.4); }
 
 .tooltipster-fall {
-	top: 0;
-	-webkit-transition-property: top;
-	-moz-transition-property: top;
-	-o-transition-property: top;
-	-ms-transition-property: top;
-	transition-property: top;
-	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15); 
-	-moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15); 
-	-ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15); 
-	-o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15); 
-	transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15); 
-}
-.tooltipster-fall-show {
-}
+  top: 0;
+  -webkit-transition-property: top;
+  -moz-transition-property: top;
+  -o-transition-property: top;
+  -ms-transition-property: top;
+  transition-property: top;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  -ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15); }
+
 .tooltipster-fall.tooltipster-dying {
-	-webkit-transition-property: all;
-	-moz-transition-property: all;
-	-o-transition-property: all;
-	-ms-transition-property: all;
-	transition-property: all;
-	top: 0px !important;
-	opacity: 0;
-}
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -ms-transition-property: all;
+  transition-property: all;
+  top: 0px !important;
+  opacity: 0; }
 
 .tooltipster-slide {
-	left: -40px;
-	-webkit-transition-property: left;
-	-moz-transition-property: left;
-	-o-transition-property: left;
-	-ms-transition-property: left;
-	transition-property: left;
-	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15); 
-	-moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15); 
-	-ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15); 
-	-o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15); 
-	transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
-}
-.tooltipster-slide.tooltipster-slide-show {
-}
-.tooltipster-slide.tooltipster-dying {
-	-webkit-transition-property: all;
-	-moz-transition-property: all;
-	-o-transition-property: all;
-	-ms-transition-property: all;
-	transition-property: all;
-	left: 0px !important;
-	opacity: 0;
-}
+  left: -40px;
+  -webkit-transition-property: left;
+  -moz-transition-property: left;
+  -o-transition-property: left;
+  -ms-transition-property: left;
+  transition-property: left;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  -ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15); }
 
+.tooltipster-slide.tooltipster-dying {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -ms-transition-property: all;
+  transition-property: all;
+  left: 0px !important;
+  opacity: 0; }
 
 /* CSS transition for when contenting is changing in a tooltip that is still open. The only properties that will NOT transition are: width, height, top, and left */
 .tooltipster-content-changing {
-	opacity: 0.5;
-	-webkit-transform: scale(1.1, 1.1);
-	-moz-transform: scale(1.1, 1.1);
-	-o-transform: scale(1.1, 1.1);
-	-ms-transform: scale(1.1, 1.1);
-	transform: scale(1.1, 1.1);
-}
-
+  opacity: 0.5;
+  -webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1); }
 
 /* ===========================================================
  *
@@ -763,256 +305,670 @@ ul li {
  *
  *  Oddny | Cogs 'n Kegs
  * =========================================================== */
-
-
 .sod_select,
-.sod_select *
-    {
-        -webkit-box-sizing: border-box;
-           -moz-box-sizing: border-box;
-                box-sizing: border-box;
-     -webkit-touch-callout: none;
-       -webkit-user-select: none;
-          -moz-user-select: none;
-           -ms-user-select: none;
-               user-select: none;
-    }
+.sod_select * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 /* The SoD - Please keep this first three lines intact, otherwise all hell will break looooooose */
-.sod_select
-    {
-        display: inline-block;
-        position: relative;
-        line-height: 1;
+.sod_select {
+  display: inline-block;
+  position: relative;
+  line-height: 1;
+  width: 200px;
+  padding: 15px 10px;
+  border: 3px solid #5e5e5e;
+  background: #ffffff;
+  color: #444444;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  outline: 0;
+  outline-offset: -2px;
+  /* Opera */
+  cursor: default; }
 
-        width: 200px;
-        padding: 15px 10px;
-        border: 3px solid #5e5e5e;
-        background: #ffffff;
-        color: #444444;
-        font-size: 11px;
-        font-weight: 700;
-        text-align: left;
-        text-transform: uppercase;
-        outline: 0;
-        outline-offset: -2px; /* Opera */
-        cursor: default;
-    }
+/* Up/Down arrows */
+.sod_select:before,
+.sod_select:after {
+  content: "\25B2";
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  font-size: 7px; }
 
-    /* Up/Down arrows */
-    .sod_select:before,
-    .sod_select:after
-        {
-            content: "\25B2";
-            position: absolute;
-            right: 10px;
-            top: 12px;
-            font-size: 7px;
-        }
+/* Down arrow */
+.sod_select:after {
+  content: "\25BC";
+  top: auto;
+  bottom: 12px; }
 
-        /* Down arrow */
-        .sod_select:after
-            {
-                content: "\25BC";
-                top: auto;
-                bottom: 12px;
-            }
+/* Change the border color on hover, focus and when open */
+.sod_select:hover,
+.sod_select.open,
+.sod_select.focus {
+  border-color: #000000; }
 
-    /* Change the border color on hover, focus and when open */
-    .sod_select:hover,
-    .sod_select.open,
-    .sod_select.focus { border-color: #000000; }
+.sod_select.open {
+  color: #919191; }
 
-        .sod_select.open { color: #919191; }
-        .sod_select.focus { box-shadow: 0 0 5px rgba(0,0,0,.2); }
+.sod_select.focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
 
-    /* When the entire SoD is disabled, go crazy! */
-    .sod_select.disabled
-        {
-            border-color: #828282;
-            color: #b2b2b2;
-            cursor: not-allowed;
-        }
+/* When the entire SoD is disabled, go crazy! */
+.sod_select.disabled {
+  border-color: #828282;
+  color: #b2b2b2;
+  cursor: not-allowed; }
 
-    /* The "label", or whatever we should call it. Keep the first three lines for truncating. */
-    .sod_select .sod_label
-        {
-            display: block;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            font-family: brandonbold;
-            text-transform: uppercase;
-            padding-right: 15px;
-        }
+/* The "label", or whatever we should call it. Keep the first three lines for truncating. */
+.sod_select .sod_label {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: brandonbold;
+  text-transform: uppercase;
+  padding-right: 15px; }
 
-        .sod_select .sod_prefix { /* Use this if you're using a prefix and want to style it */ }
-        .sod_select .sod_placeholder { 
-        	font-family: brandonbold;
-        	text-transform: uppercase;
-         }
+.sod_select .sod_prefix {
+  /* Use this if you're using a prefix and want to style it */ }
 
+.sod_select .sod_placeholder {
+  font-family: brandonbold;
+  text-transform: uppercase; }
 
+/* Options list wrapper */
+.sod_select .sod_list_wrapper {
+  font-family: brandonreg;
+  text-transform: uppercase;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  height: auto;
+  width: 150px;
+  margin: -2 0 0 -1px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-top: none;
+  color: #444444;
+  z-index: 10000; }
 
-    /* Options list wrapper */
-    .sod_select .sod_list_wrapper
-        {
-        	font-family: brandonreg;
-        	text-transform: uppercase;
-        	position: absolute;
-			top: 100%;
-			left: 0;
-			display: none;
-			height: auto;
-			width: 150px;
-			margin: -2 0 0 -1px;
-			background: #ffffff;
-			border: 1px solid #000000;
-			border-top: none;
-			color: #444444;
-			z-index: 1;
-        }
+/* Shows the option list (don't edit) */
+.sod_select.open .sod_list_wrapper {
+  display: block; }
 
-        /* Shows the option list (don't edit) */
-        .sod_select.open .sod_list_wrapper { display: block;  }
+/* Don't display the options when  */
+.sod_select.disabled.open .sod_list_wrapper {
+  display: none; }
 
-        /* Don't display the options when  */
-        .sod_select.disabled.open .sod_list_wrapper { display: none;  }
+/* When the option list is displayed above the SoD */
+.sod_select.above .sod_list_wrapper {
+  top: auto;
+  bottom: 100%;
+  border-top: 3px solid #000000;
+  border-bottom: none; }
 
-        /* When the option list is displayed above the SoD */
-        .sod_select.above .sod_list_wrapper
-            {
-                top: auto;
-                bottom: 100%;
-                border-top: 3px solid #000000;
-                border-bottom: none;
-            }
+/* Options list container */
+.sod_select .sod_list {
+  display: block;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0; }
 
-    /* Options list container */
-    .sod_select .sod_list
-        {
-            display: block;
-            overflow-y: auto;
-            padding: 0;
-            margin: 0;
-        }
+/* All the options. Keep the first three lines for truncating... */
+.sod_select .sod_option {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  padding: 10px 10px;
+  list-style-type: none; }
 
-        /* All the options. Keep the first three lines for truncating... */
-        .sod_select .sod_option
-            {
-                display: block;
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
+/* Optgroups */
+.sod_select .sod_option.optgroup,
+.sod_select .sod_option.optgroup.disabled {
+  background: inherit;
+  color: #939393;
+  font-size: 10px;
+  font-style: italic; }
 
-                position: relative;
-                padding: 10px 10px;
-                list-style-type: none;
-            }
+/* Children of an optgroup */
+.sod_select .sod_option.groupchild {
+  padding-left: 20px; }
 
-            /* Optgroups */
-            .sod_select .sod_option.optgroup,
-            .sod_select .sod_option.optgroup.disabled
-                {
-                    background: inherit;
-                    color: #939393;
-                    font-size: 10px;
-                    font-style: italic;
-                }
+/* Used together with placeholderOption / data-placeholder-option */
+.sod_select .sod_option.is-placeholder {
+  display: none; }
 
-                /* Children of an optgroup */
-                .sod_select .sod_option.groupchild { padding-left: 20px; }
+/* Disabled option */
+.sod_select .sod_option.disabled {
+  background: inherit;
+  color: #cccccc; }
 
-            /* Used together with placeholderOption / data-placeholder-option */
-            .sod_select .sod_option.is-placeholder {
-                display: none;
-            }
+/* Hover state for options, also used when a user uses his/hers up/down keys */
+.sod_select .sod_option.active {
+  background: #f7f7f7;
+  color: #333333; }
 
-            /* Disabled option */
-            .sod_select .sod_option.disabled
-                {
-                    background: inherit;
-                    color: #cccccc;
-                }
+/*Make room for the check mark */
+.sod_select .sod_option.selected {
+  font-weight: 700;
+  padding-right: 25px; }
 
-            /* Hover state for options, also used when a user uses his/hers up/down keys */
-            .sod_select .sod_option.active
-                {
-                    background: #f7f7f7;
-                    color: #333333;
-                }
+/* Displays a check mark for the selected option */
+.sod_select .sod_option.selected:before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: inline-block;
+  color: #808080;
+  height: 9px;
+  width: 10px;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTAgOSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAgOSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjRDlEOUQ4IiBkPSJNNCw2LjdDMy42LDYuMywzLjUsNi4xLDMuMSw1LjdDMi42LDUuMiwyLDQuNiwxLjUsNC4xYy0wLjgtMC44LTIsMC40LTEuMiwxLjJjMC45LDAuOSwxLjksMS45LDIuOCwyLjgNCgkJYzAuNywwLjcsMS4zLDEsMiwwQzYuNyw2LDguMywzLjcsOS44LDEuNUMxMC41LDAuNSw5LTAuMyw4LjMsMC42bDAsMEM2LjcsMi45LDUuNyw0LjQsNCw2LjciLz4NCjwvZz4NCjwvc3ZnPg0K); }
 
-            /*Make room for the check mark */
-            .sod_select .sod_option.selected
-                {
-                    font-weight: 700;
-                    padding-right: 25px;
-                }
+/* Add a .no_highlight class to you SoD to hide the check mark and don't bold the option */
+.sod_select.no_highlight .sod_option.selected {
+  font-weight: 300; }
 
-                /* Displays a check mark for the selected option */
-                .sod_select .sod_option.selected:before
-                    {
-                        content: "";
-                        position: absolute;
-                        right: 10px;
-                        top: 50%;
-                        -webkit-transform: translateY(-50%);
-                            -ms-transform: translateY(-50%);
-                                transform: translateY(-50%);
-                        display: inline-block;
-                        color: #808080;
-                        height: 9px;
-                        width: 10px;
-                        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTAgOSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAgOSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjRDlEOUQ4IiBkPSJNNCw2LjdDMy42LDYuMywzLjUsNi4xLDMuMSw1LjdDMi42LDUuMiwyLDQuNiwxLjUsNC4xYy0wLjgtMC44LTIsMC40LTEuMiwxLjJjMC45LDAuOSwxLjksMS45LDIuOCwyLjgNCgkJYzAuNywwLjcsMS4zLDEsMiwwQzYuNyw2LDguMywzLjcsOS44LDEuNUMxMC41LDAuNSw5LTAuMyw4LjMsMC42bDAsMEM2LjcsMi45LDUuNyw0LjQsNCw2LjciLz4NCjwvZz4NCjwvc3ZnPg0K);
-                    }
+.sod_select.no_highlight .sod_option.selected:before {
+  display: none; }
 
-                /* Add a .no_highlight class to you SoD to hide the check mark and don't bold the option */
-                .sod_select.no_highlight .sod_option.selected { font-weight: 300; }
-                .sod_select.no_highlight .sod_option.selected:before { display: none; }
+.sod_select .sod_option.link {
+  /* If data-link is set on a specific option */ }
 
-            .sod_select .sod_option.link { /* If data-link is set on a specific option */ }
-            .sod_select .sod_option.linkexternal { /* If data-link-external is set on a specific option */ }
+.sod_select .sod_option.linkexternal {
+  /* If data-link-external is set on a specific option */ }
 
+/* Hide native select */
+.sod_select select {
+  display: none !important; }
 
-
-    /* Hide native select */
-    .sod_select select { display: none !important; }
-
-        /* The native select in touch mode. Keep this first line. Sorry, keep everything. */
-        .sod_select.touch select
-            {
-                -webkit-appearance: menulist-button;
-
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: block !important;
-                height: 100%;
-                width: 100%;
-                opacity: 0;
-                z-index: 1;
-            }
+/* The native select in touch mode. Keep this first line. Sorry, keep everything. */
+.sod_select.touch select {
+  -webkit-appearance: menulist-button;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block !important;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  z-index: 1; }
 
 .lightweight {
-display: inline-block;
-position: relative;
-line-height: 1;
-width: 150px;
-padding: 13px 10px;
-background-color: rgba(252,252,252, 0.7);
-border: 1px solid #d4d4d4;
-box-shadow: inset 0 -1px 2px rgba(0,0,0,.05);
-border-radius: 3px;
-color: #808080;
-font-size: 12px;
-font-weight: 700;
-text-align: left;
-text-transform: none;
-outline: 0;
-outline-offset: -2px;
-cursor: default;
-}
-.lightweight:hover {
- background-color: rgba(252,252,252, 1);
+  display: inline-block;
+  position: relative;
+  line-height: 1;
+  width: 150px;
+  padding: 13px 10px;
+  background-color: rgba(252, 252, 252, 0.7);
+  border: 1px solid #d4d4d4;
+  box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  color: #808080;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: none;
+  outline: 0;
+  outline-offset: -2px;
+  cursor: default; }
 
-}
+.lightweight:hover {
+  background-color: #fcfcfc; }
+
+.filterweight {
+  display: inline-block;
+  position: relative;
+  line-height: 1;
+  width: 150px;
+  padding: 10px 7px;
+  background-color: #444;
+  border: 1px solid #444;
+  box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  color: white;
+  font-size: 12px;
+  text-align: left;
+  text-transform: none;
+  outline: 0;
+  outline-offset: -2px;
+  cursor: default;
+  margin-top: 10px; }
+
+.sod_select .sod_list_wrapper {
+  font-family: brandonreg;
+  text-transform: uppercase;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  height: auto;
+  width: 150px;
+  margin: -2 0 0 -1px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-top: none;
+  color: #444444;
+  z-index: 10000; }
+
+/* TEAM OPTIMISTS CUSTOM CODE */
+body {
+  background: black;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* HEADER PART */
+.logo {
+  margin-left: 29px;
+  margin-top: 24px;
+  margin-bottom: 14px;
+  height: 22px;
+  opacity: 1.0;
+  transition: opacity .25s ease-in-out; }
+
+.mainNav {
+  float: right;
+  opacity: 1.0;
+  transition: opacity .25s ease-in-out;
+  text-transform: uppercase;
+  font-family: brandonbold;
+  color: #444; }
+
+/* WEBSITE */
+.websiteContent {
+  background: #111111;
+  height: 0px;
+  overflow: hidden;
+  background-image: url("../images/bg2.gif");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0; }
+
+.ladiela {
+  height: 500px;
+  background-image: url("../images/overlay_bg2.png");
+  background-repeat: repeat; }
+
+.yellowTag {
+  background: #111111;
+  padding: 5px 9px;
+  display: inline-block;
+  font-family: brandonbold;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 5px;
+  margin-top: 89px; }
+
+.teamList {
+  list-style: none; }
+  .teamList li {
+    background: #111111;
+    padding: 5px 9px;
+    display: inline-block;
+    font-family: brandonreg;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px; }
+
+/* FILTERBAR */
+.filtercontrol {
+  width: 100%;
+  height: 112px;
+  background: #eeeeee;
+  z-index: 105;
+  display: absolute; }
+
+/* CUSTOM FONTS */
+@font-face {
+  font-family: brandonreg;
+  src: url(../fonts/brandonreg.woff); }
+@font-face {
+  font-family: brandonreg;
+  src: url(../fonts/brandonreg.eot); }
+@font-face {
+  font-family: brandonbold;
+  src: url(../fonts/brandonbold.woff); }
+@font-face {
+  font-family: brandonbold;
+  src: url(../fonts/brandonbold.eot); }
+.sortbar {
+  border-top: 1px solid #1a1a1a;
+  width: 100%;
+  height: 52px;
+  background-color: #111111;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex; }
+
+.section {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-left: 1px solid #1a1a1a;
+  border-right: 1px solid #1a1a1a; }
+
+.sorticon {
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-top: 2px; }
+
+.icon-hue, .icon-saturation {
+  margin-left: 8px;
+  margin-right: 8px; }
+
+.sortbutton {
+  height: 52px;
+  border-top: none;
+  border-bottom: none;
+  border-left: 1px solid #1a1a1a;
+  border-right: none;
+  line-height: 52px;
+  font-family: brandonbold;
+  font-size: 16px;
+  background: none;
+  color: #696969; }
+
+.shuffle-button {
+  display: inline-block;
+  height: 41px; }
+
+.exceptionButton {
+  border-right: 1px solid #1a1a1a; }
+
+.sortdesc, .layoutdesc, .visualdesc {
+  line-height: 52px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-transform: uppercase;
+  font-family: brandonreg;
+  color: #eee; }
+
+.layoutdesc {
+  float: left; }
+
+.iconDrop {
+  margin-left: 5px;
+  margin-right: 11px; }
+
+nav {
+  float: left; }
+
+nav ul {
+  text-align: center; }
+
+nav ul li {
+  float: left;
+  display: inline; }
+
+nav ul li:hover {
+  background: #E6E6E6; }
+
+nav ul li a {
+  display: block;
+  line-height: 52px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #444; }
+
+nav ul li ul {
+  position: absolute;
+  width: 110px;
+  background: #FFF; }
+
+nav ul li ul li {
+  width: 110px; }
+
+nav ul li ul li a {
+  display: block;
+  padding: 15px 10px;
+  color: #444; }
+
+nav ul li ul li:hover a {
+  background: #F7F7F7; }
+
+nav ul li ul.fallback {
+  display: none; }
+
+nav ul li:hover ul.fallback {
+  display: block; }
+
+.dropdown {
+  z-index: 200; }
+
+.layoutul {
+  display: inline-block; }
+  .layoutul:last-child {
+    border-right: 1px solid #1a1a1a; }
+
+ul li {
+  display: inline; }
+
+a:hover {
+  text-decoration: none !important; }
+
+.widthli, .columnsli {
+  padding-left: 5px;
+  padding-right: 9px;
+  display: inherit;
+  z-index: 120;
+  border-left: 1px solid #1a1a1a;
+  line-height: 52px;
+  font-family: brandonbold;
+  text-decoration: none; }
+
+.filterbutton {
+  height: 60px;
+  border-top: none;
+  border-bottom: none;
+  border-left: 1px solid #ACACAC;
+  border-right: 1px solid #ACACAC;
+  line-height: 60px;
+  background-color: #eeeeee;
+  font-family: brandonbold;
+  font-size: 16px;
+  color: #696969;
+  margin-left: -7px; }
+
+.filterbutton:focus {
+  outline: 0;
+  background: #f5f5f5; }
+
+.icon-desc {
+  text-transform: uppercase;
+  padding-left: 65px;
+  padding-right: 15px; }
+
+.icon-eye {
+  margin-left: 5px;
+  margin-top: 15px;
+  display: block;
+  position: absolute; }
+
+.icon-burqa {
+  margin-left: -7px;
+  margin-top: 15px;
+  display: block;
+  position: absolute; }
+
+.icon-violence {
+  margin-left: 5px;
+  margin-top: 15px;
+  display: block;
+  position: absolute; }
+
+/* FILTERBAR: FILTERING */
+.grayscale {
+  -webkit-filter: grayscale(100%) !important;
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+  /* IE 6-9 */
+  transition: filter 1s ease-in-out;
+  -webkit-transition: filter 1s ease-in-out; }
+
+/* FILTERBAR: SORTING */
+.saturation, .hue, .brightness, .shapes, .articlelength {
+  display: none; }
+
+/* ISOTOPES */
+#container {
+  background: #000;
+  height: 100%;
+  min-height: 300px; }
+
+/* new clearfix */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.division {
+  width: 50%;
+  background: black;
+  float: left; }
+
+#orientalcountry {
+  width: 50%;
+  float: left;
+  background: black !important; }
+  #orientalcountry:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0px;
+    text-indent: -999999em; }
+
+.nytPhoto {
+  width: 33.3%; }
+
+.groter {
+  width: 66.6%; }
+
+.fluid {
+  width: 100%;
+  opacity: 1.0; }
+  .fluid:hover {
+    opacity: 0.4; }
+
+.orientaltag {
+  opacity: 1.0; }
+
+.gone {
+  opacity: 0;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out; }
+
+.countryBox {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 15px; }
+
+.countrylist {
+  background-image: url("../images/countrylist_shadow.png");
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 113px;
+  position: absolute;
+  z-index: 70;
+  transition: background-image .5s linear; }
+  .countrylist:hover {
+    background-image: url("../images/countrylist_shadowhover.png");
+    background-repeat: no-repeat;
+    transition: background-image .5s linear; }
+
+.countrylistLoop {
+  margin-left: 15px; }
+
+.imagetag {
+  padding-top: 5px;
+  height: 70px;
+  display: block;
+  position: fixed;
+  margin-top: 100px;
+  z-index: 60;
+  pointer-events: none; }
+
+.shadowgradiant {
+  background-image: url("../images/gradiant.png");
+  background-repeat: repeat-y;
+  width: 65px;
+  height: 100%;
+  z-index: 5;
+  position: absolute;
+  opacity: 1.0;
+  pointer-events: none;
+  -webkit-transition: opacity .25s ease-in-out; }
+
+#orientalcountry:hover > .shadowgradiant {
+  opacity: 0.8;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out; }
+
+#imperialcountry:hover > .shadowgradiant {
+  opacity: 0.8;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out; }
+
+/* SLIDER */
+.ui-resizable-e {
+  cursor: url("../images/slidercursor.svg") 30 0, auto !important;
+  width: 33px !important;
+  top: 0;
+  right: 0px !important;
+  height: 100%;
+  transition: background-image 1s linear;
+  background-image: url("../images/transparent.png"); }
+
+.ui-resizable-e:hover {
+  background-image: url("../images/sliderhighlight.png");
+  background-repeat: repeat-y;
+  background-position: right;
+  transition: background-image 1s linear; }
+
+/* CONTENT NYTTOOLTIP */
+.nytTimestamp {
+  margin-top: 5px; }
+
+.nytHeading {
+  margin-top: 15px;
+  font-family: Georgia;
+  font-size: 18px;
+  color: white;
+  text-transform: none; }
+
+.nytSnippet {
+  margin-top: 10px;
+  text-transform: none;
+  font-size: 14px; }
